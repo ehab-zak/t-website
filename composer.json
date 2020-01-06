@@ -1,0 +1,39 @@
+{
+    "name": "sekas/websites",
+    "type": "typo3-cms-extension",
+    "description": "FLUID Templates & TypoScript",
+    "homepage": "https://www.sekas.de/",
+    "keywords": [
+        "TYPO3",
+        "CMS",
+        "extension"
+    ],
+    "authors": [
+        {
+            "name": "sekas",
+            "email": "info@sekas.de",
+            "role": "Developer",
+            "homepage": "https://www.sekas.de/"
+        }
+    ],
+    "license": [
+        "GPL-2.0-or-later"
+    ],
+    "require": {
+        "typo3/cms-core": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "sekas\\\websites\\": "Classes/"
+        }
+    },
+    "replace": {
+        "websites": "self.version",
+        "typo3-ter/websites": "self.version"
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "websites"
+        }
+    }
+}
