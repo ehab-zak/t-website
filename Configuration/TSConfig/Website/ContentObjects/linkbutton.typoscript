@@ -1,0 +1,15 @@
+mod.wizards.newContentElement.wizardItems {
+	extra {
+		elements {
+			linkbutton {
+				iconIdentifier = tx_websites_ctypes_linkbutton
+				title = LLL:EXT:websites/Resources/Private/Language/locallang.xlf:customcontentobjects_linkbutton_title
+				description = LLL:EXT:websites/Resources/Private/Language/locallang.xlf:customcontentobjects_linkbutton_description
+				tt_content_defValues {
+					CType = linkbutton
+				}
+			}
+		}
+		show = *
+	}
+}

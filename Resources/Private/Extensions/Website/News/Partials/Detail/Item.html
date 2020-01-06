@@ -1,0 +1,79 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+	  xmlns:f="http://xsd.helmut-hummel.de/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:n="http://xsd.helmut-hummel.de/ns/News/ViewHelpers">
+
+{namespace n=GeorgRinger\News\ViewHelpers}
+
+<!--
+	=====================
+		News/Detail.html
+-->
+<f:section name="content">
+	<f:if condition="{newsItem}">
+		<f:then>
+			<n:excludeDisplayedNews newsItem="{newsItem}"/>
+			<n:format.nothing>
+				<f:if condition="{newsItem.alternativeTitle}">
+					<f:then>
+						<n:titleTag>
+							<f:format.htmlentitiesDecode>{newsItem.alternativeTitle}</f:format.htmlentitiesDecode>
+						</n:titleTag>
+					</f:then>
+					<f:else>
+						<n:titleTag>
+							<f:format.htmlentitiesDecode>{newsItem.title}</f:format.htmlentitiesDecode>
+						</n:titleTag>
+					</f:else>
+				</f:if>
+				<f:render partial="Detail/Opengraph" arguments="{newsItem: newsItem, settings:settings}" />
+			</n:format.nothing>
+
+			<f:if condition="{settings.detail.showPrevNext}">
+				<f:comment>we have to exchange prev and next as there is a desc sorting</f:comment>
+				<n:simplePrevNext pidList="{newsItem.pid}" news="{newsItem}" as="paginated" sortField="datetime">
+					<f:if condition="{paginated}">
+						<ul class="prev-next">
+							<f:if condition="{paginated.next}">
+								<li class="left">
+									<n:link newsItem="{paginated.next}" settings="{settings}" class="next" title="{paginated.next.title}">
+										{paginated.next.title}
+									</n:link>
+								</li>
+							</f:if>
+							<f:if condition="{paginated.prev}">
+								<li class="right">
+									<n:link newsItem="{paginated.prev}" settings="{settings}" class="prev" title="{paginated.prev.title}">
+										{paginated.prev.title}
+									</n:link>
+								</li>
+							</f:if>
+						</ul>
+					</f:if>
+				</n:simplePrevNext>
+			</f:if>
+
+			<!-- date -->
+			<span class="news-single-date">
+				<time itemprop="datePublished" datetime="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}">
+					<f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date>
+				</time>
+			</span>
+
+			<div class="header">
+				<h1 itemprop="headline">{newsItem.title}</h1>
+			</div>
+
+			<n:renderMedia news="{newsItem}" imgClass="img-responsive" videoClass="video-wrapper" audioClass="audio-wrapper">
+				<f:render partial="Detail/MediaContainer" arguments="{media: newsItem.media, settings:settings}" />
+
+				<!-- main text -->
+				<div class="news-text-wrap" itemprop="articleBody">
+					<f:format.html>{newsItem.bodytext}</f:format.html>
+				</div>
+			</n:renderMedia>
+		</f:then>
+		<f:else>
+
+		</f:else>
+	</f:if>
+</f:section>

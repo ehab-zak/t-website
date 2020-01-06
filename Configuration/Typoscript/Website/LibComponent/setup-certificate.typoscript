@@ -1,0 +1,54 @@
+### certificate
+lib.component.certificate {
+
+  go_digital = IMAGE
+  go_digital{
+    file = {$lib.website.path.siteRoot}/{$lib.system.certificate.go_digital.file}
+    altText = {$lib.system.certificate.go_digital.alt}
+    stdWrap.typolink {
+      parameter = {$lib.system.certificate.go_digital.url}
+           title = {$lib.system.certificate.go_digital.title}
+    }
+  }
+
+  allianz_cybersicherheit = IMAGE
+  allianz_cybersicherheit{
+    file = {$lib.website.path.siteRoot}/{$lib.system.certificate.allianz_cybersicherheit.file}
+    altText = {$lib.system.certificate.allianz_cybersicherheit.alt}
+    stdWrap.typolink {
+      parameter = {$lib.system.certificate.allianz_cybersicherheit.url}
+           title = {$lib.system.certificate.allianz_cybersicherheit.title}
+    }
+  }
+
+  commendit = IMAGE
+  commendit{
+    file = {$lib.website.path.siteRoot}/{$lib.system.certificate.commendit.file}
+    altText = {$lib.system.certificate.commendit.alt}
+    stdWrap.typolink {
+      parameter = {$lib.system.certificate.commendit.url}
+           title = {$lib.system.certificate.commendit.title}
+    }
+  }
+vku = IMAGE
+	vku {
+		file = {$lib.website.path.siteRoot}/{$lib.system.certificate.vku.file}
+		altText = {$lib.system.certificate.vku.alt}
+		stdWrap.typolink {
+			parameter = {$lib.system.certificate.vku.url}
+		       title = {$lib.system.certificate.vku.title}
+		}
+	}
+	bayme = IMAGE
+	bayme {
+		file = {$lib.website.path.siteRoot}/{$lib.system.certificate.bayme.file}
+		altText = {$lib.system.certificate.bayme.alt}
+		stdWrap.typolink {
+			parameter = {$lib.system.certificate.bayme.url}
+		       title = {$lib.system.certificate.bayme.title}
+		}
+	}
+
+
+}
+

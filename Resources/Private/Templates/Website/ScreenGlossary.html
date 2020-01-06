@@ -1,0 +1,20 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+	  xmlns:f="http://xsd.helmut-hummel.de/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<f:layout name="Default"/>
+
+<f:section name="Main">
+	<f:render partial="HeaderImage" section="Main"/>
+	<f:render partial="SideBar" section="Main"/>
+	<div class="content center-section">
+		<div class="page-padding">
+			<f:render partial="NaviBreadcrumb" section="Main"/>
+			<h1><f:cObject typoscriptObjectPath="lib.component.pagetitle"/></h1>
+			<f:cObject typoscriptObjectPath="lib.content.main"/>
+			<f:cObject typoscriptObjectPath="lib.navi.glossary"/>
+		</div>
+	</div>
+	<f:render partial="Contact" section="Main" arguments="{layout:'footer'}"/>
+</f:section>
+
+</html>

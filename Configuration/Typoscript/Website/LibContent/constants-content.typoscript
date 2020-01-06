@@ -1,0 +1,16 @@
+styles {
+	content {
+		textmedia {
+			maxW = 1330
+			maxWInText = 508
+
+			linkWrap {
+				width = 1024m
+				height = 768m
+			}
+
+		}
+
+		loginform.pid = 0
+	}
+}

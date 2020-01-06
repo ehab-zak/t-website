@@ -1,0 +1,2 @@
+// clear page cache
+TCEMAIN.clearCacheCmd = pages

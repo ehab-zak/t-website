@@ -1,0 +1,52 @@
+// remove default css styles
+plugin.tx_frontend._CSS_DEFAULT_STYLE >
+
+#// add table classes for rte
+#lib.parseFunc_RTE.externalBlocks {
+#  table.stdWrap.HTMLparser.tags.table.fixAttrib.class.list := addToList(gridtable)
+#}
+
+#// default list (ul) class
+#lib.parseFunc_RTE {
+#  externalBlocks := addToList(ul)
+#  externalBlocks {
+#    ul.stripNL = 1
+#    ul.callRecursive = 1
+#    ul.callRecursive.tagStdWrap.HTMLparser = 1
+#    ul.callRecursive.tagStdWrap.HTMLparser.tags.ul {
+#      fixAttrib.class.default = contentlist
+#    }
+#  }
+#}
+
+// customize rendering of content objects
+lib.fluidContent {
+  templateName = Default
+  templateRootPaths {
+    20 = {$lib.website.path.fluidStyledContentModifiedRoot}Templates/
+    30 = {$lib.website.path.fluidStyledContentNewRoot}Templates/
+  }
+  layoutRootPaths {
+    20 = {$lib.website.path.fluidStyledContentModifiedRoot}Layouts/
+    30 = {$lib.website.path.fluidStyledContentNewRoot}Layouts/
+  }
+  partialRootPaths {
+    20 = {$lib.website.path.fluidStyledContentModifiedRoot}Partials/
+    30 = {$lib.website.path.fluidStyledContentNewRoot}Partials/
+  }
+}
+
+// default page content
+lib.content.main < styles.content.get
+lib.content.main.wrap = <div class="pagecontent">|</div>
+
+// no wrapper on root for section scrolling
+[page|uid = {$lib.website.pages.websiteRoot}]
+  lib.content.main.wrap >
+[end]
+
+// imageclip page content (column 10 on root page)
+lib.content.imageclip < styles.content.get
+lib.content.imageclip {
+  select.where = colPos=10
+}

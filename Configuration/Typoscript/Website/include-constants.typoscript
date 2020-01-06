@@ -1,0 +1,8 @@
+
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/Typoscript/Website/Base/constants-system.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/Typoscript/Website/Base/constants-website.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/Typoscript/Website/ExtImageclip/constants-imageclip.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/Typoscript/Website/ExtNews/constants-news.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/Typoscript/Website/LibMeta/constants-meta.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/Typoscript/Website/LibContent/constants-content.typoscript">
+##<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/Typoscript/Website/LibTracking/constants-piwik.typoscript">

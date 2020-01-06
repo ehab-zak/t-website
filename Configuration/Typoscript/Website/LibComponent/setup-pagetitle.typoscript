@@ -1,0 +1,5 @@
+lib.component.pagetitle = COA
+lib.component.pagetitle {
+  10 = TEXT
+  10.data = page:subtitle // page:title
+}

@@ -1,0 +1,132 @@
+### imageslider
+lib.component.imageslider < styles.content.get
+lib.component.imageslider {
+
+  wrap = <div id="image-slider"><ul class="slides">|</ul></div>
+
+  select.pidInList = {$lib.website.storage.rootPageSliderImages}
+  select.where = colPos=1
+
+  renderObj = COA
+  renderObj {
+    wrap = <li class="sliderimage">|</li>
+
+    10 = COA
+    10 {
+      stdWrap.typolink {
+        parameter.field = header_link
+        title.field = header
+      }
+
+      // render picture tag
+      10 = COA
+      10 {
+        wrap = <picture>|</picture>
+
+        // fallback
+        800 = FILES
+        800 {
+          references {
+            table = tt_content
+            fieldName = assets
+          }
+
+          begin = 3
+          maxItems = 1
+
+          renderObj = COA
+          renderObj {
+            10 = IMAGE
+            10 {
+              file.import.data = file:current:publicUrl
+            }
+          }
+        }
+
+        // widescreen - min-width = 1440
+        100 < .800
+        100 {
+
+          renderObj {
+            10 = IMG_RESOURCE
+            wrap = <source media="(min-width: 1440px)" srcset="|" >
+          }
+        }
+
+        // desktop - min-width = 1024
+        200 < .800
+        200 {
+          begin = 2
+
+          renderObj {
+            10 = IMG_RESOURCE
+            wrap = <source media="(min-width: 1024px)" srcset="|" >
+          }
+        }
+
+        // tablet - min-width = 768
+        300 < .800
+        300 {
+          begin = 1
+
+          renderObj {
+            10 = IMG_RESOURCE
+            wrap = <source media="(min-width: 768px)" srcset="|" >
+          }
+        }
+
+        // mobile - default
+        400 < .800
+        400 {
+          begin = 0
+
+          renderObj {
+            10 = IMG_RESOURCE
+            wrap = <source srcset="|" >
+          }
+        }
+
+        /* seems to be no valid html
+        910 = TEXT
+        910.field = header
+        910.htmlSpecialChars = 1
+        910.wrap = <p>|</p>
+        */
+      }
+
+
+      // render text box within wrapper to get centered on tablet and larger
+      20 = COA
+      20 {
+        wrap = <span class="center-section">|</span>
+
+        20 = TEXT
+        20.value = <span class="box layer"></span>
+
+        30 = COA
+        30 {
+          wrap = <span class="box title">|</span>
+
+          10 = TEXT
+          10 {
+            wrap = <h2>|</h2>
+            field = header
+            htmlSpecialChars = 1
+          }
+
+          20 = TEXT
+          20 {
+            wrap = <h4>|</h4>
+            field = bodytext
+            htmlSpecialChars = 1
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}

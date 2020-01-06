@@ -1,0 +1,115 @@
+### customer
+lib.component.customer {
+
+  rohde = IMAGE
+  rohde {
+    file = {$lib.website.path.siteRoot}/{$lib.system.customer.rohde.file}
+    altText = {$lib.system.customer.rohde.alt}
+    stdWrap.typolink {
+      parameter = {$lib.system.customer.rohde.url}
+      extTarget = _blank
+      title = {$lib.system.customer.rohde.title}
+    }
+  }
+
+   bosch = IMAGE
+   bosch {
+     file = {$lib.website.path.siteRoot}/{$lib.system.customer.bosch.file}
+     altText = {$lib.system.customer.bosch.alt}
+     stdWrap.typolink {
+       parameter = {$lib.system.customer.bosch.url}
+       extTarget = _blank
+       title = {$lib.system.customer.bosch.title}
+     }
+   }
+
+  indra = IMAGE
+  indra {
+    file = {$lib.website.path.siteRoot}/{$lib.system.customer.indra.file}
+    altText = {$lib.system.customer.indra.alt}
+    stdWrap.typolink {
+      parameter = {$lib.system.customer.indra.url}
+      extTarget = _blank
+      title = {$lib.system.customer.indra.title}
+    }
+  }
+
+  ruag = IMAGE
+  ruag {
+    file = {$lib.website.path.siteRoot}/{$lib.system.customer.ruag.file}
+    altText = {$lib.system.customer.ruag.alt}
+    stdWrap.typolink {
+      parameter = {$lib.system.customer.ruag.url}
+      extTarget = _blank
+      title = {$lib.system.customer.ruag.title}
+    }
+  }
+
+  pmg = IMAGE
+  pmg {
+    file = {$lib.website.path.siteRoot}/{$lib.system.customer.pmg.file}
+    altText = {$lib.system.customer.pmg.alt}
+    stdWrap.typolink {
+#      parameter = {$lib.system.customer.pmg.url}
+#      extTarget = _blank
+      parameter = #
+      title = {$lib.system.customer.pmg.title}
+    }
+  }
+
+  leonardo = IMAGE
+  leonardo {
+    file = {$lib.website.path.siteRoot}/{$lib.system.customer.leonardo.file}
+    altText = {$lib.system.customer.leonardo.alt}
+    stdWrap.typolink {
+      parameter = {$lib.system.customer.leonardo.url}
+      extTarget = _blank
+      title = {$lib.system.customer.leonardo.title}
+    }
+  }
+  
+  lyomark = IMAGE
+  lyomark {
+    file = {$lib.website.path.siteRoot}/{$lib.system.customer.lyomark.file}
+    altText = {$lib.system.customer.lyomark.alt}
+    stdWrap.typolink {
+      parameter = {$lib.system.customer.lyomark.url}
+      extTarget = _blank
+      title = {$lib.system.customer.lyomark.title}
+    }
+  }
+
+  bendalis = IMAGE
+  bendalis {
+    file = {$lib.website.path.siteRoot}/{$lib.system.customer.bendalis.file}
+    altText = {$lib.system.customer.bendalis.alt}
+    stdWrap.typolink {
+      parameter = {$lib.system.customer.bendalis.url}
+      extTarget = _blank
+      title = {$lib.system.customer.bendalis.title}
+    }
+  }  
+
+  lehmann = IMAGE
+  lehmann {
+    file = {$lib.website.path.siteRoot}/{$lib.system.customer.lehmann.file}
+    altText = {$lib.system.customer.lehmann.alt}
+    stdWrap.typolink {
+      parameter = {$lib.system.customer.lehmann.url}
+      extTarget = _blank
+      title = {$lib.system.customer.lehmann.title}
+    }
+  }
+
+  maiss = IMAGE
+  maiss{
+    file = {$lib.website.path.siteRoot}/{$lib.system.customer.maiss.file}
+    altText = {$lib.system.customer.maiss.alt}
+    stdWrap.typolink {
+      parameter = {$lib.system.customer.maiss.url}
+      extTarget = _blank
+      title = {$lib.system.customer.maiss.title}
+    }
+  }
+}
+

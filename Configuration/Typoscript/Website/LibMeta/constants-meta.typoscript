@@ -1,0 +1,9 @@
+lib.meta {
+	robots = index,follow
+	copyright = www.studioneun.de
+	revisit = 1 day
+}
+
+[globalVar = TSFE:page|no_search = 1]
+	lib.meta.robots = noindex,follow
+[end]

@@ -1,0 +1,16 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+	  xmlns:f="http://xsd.helmut-hummel.de/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:n="http://xsd.helmut-hummel.de/ns/News/ViewHelpers">
+
+{namespace n=GeorgRinger\News\ViewHelpers}
+
+<f:layout name="Detail.html" />
+
+<f:section name="content">
+<!--
+	=====================
+		News/Detail.html
+-->
+
+<f:render partial="Detail/Item" section="content" arguments="{_all}"/>
+</f:section>

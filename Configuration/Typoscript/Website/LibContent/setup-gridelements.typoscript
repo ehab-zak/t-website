@@ -1,0 +1,124 @@
+// rewrite gridelement cObj rendering to use fluid templates
+lib.tt_content.gridelements_plugin = USER
+lib.tt_content.gridelements_plugin {
+  userFunc = GridElementsTeam\Gridelements\Plugin\Gridelements->main
+  setup {
+    default < lib.gridelements.defaultGridSetup
+  }
+}
+tt_content {
+  gridelements_pi1 >
+
+  gridelements_pi1 =< lib.fluidContent
+  gridelements_pi1 {
+    templateName = GridElement
+  }
+  gridelements_view >
+  gridelements_view < .gridelements_pi1
+}
+
+// default setting
+lib.tt_content.gridelements_plugin.setup {
+  websitesDefault {
+    cObject = FLUIDTEMPLATE
+    cObject {
+      templateRootPaths {
+        10 = {$lib.website.path.gridelementsRoot}Templates/
+      }
+      layoutRootPaths {
+        10 = {$lib.website.path.gridelementsRoot}Layouts/
+      }
+      partialRootPaths {
+        10 = {$lib.website.path.gridelementsRoot}Partials/
+      }
+    }
+    columns {
+
+      // websitesAccordeonContainer
+      101.renderObj = < tt_content
+
+      // websitesAccordeonEntry
+      102.renderObj = < tt_content
+      103.renderObj = < tt_content
+
+#      // websitesSkills
+#      104.renderObj = < tt_content
+#      105.renderObj = < tt_content
+#      106.renderObj = < tt_content
+#      107.renderObj = < tt_content
+#      108.renderObj = < tt_content
+
+      // websitesTestimonials
+      109.renderObj = < tt_content
+      109.renderObj.stdWrap.outerWrap = <li>|</li>
+
+      // websitesNewsslider
+      110.renderObj = < tt_content
+
+      // websitesContactpersons
+      111.renderObj = < tt_content
+      112.renderObj = < tt_content
+      113.renderObj = < tt_content
+#      114.renderObj = < tt_content
+#      115.renderObj = < tt_content
+
+      // websitesContentbox
+      116.renderObj = < tt_content
+
+      // websitesTeaserslider
+      117.renderObj = < tt_content
+      117.renderObj.stdWrap.outerWrap = <li>|</li>
+
+
+      #      // colPos 200 is used for creating list items
+#      200.renderObj = < tt_content
+#      200.renderObj.stdWrap.outerWrap = <li>|</li>
+#
+#      // colPos 210 is used for rendering cObj from default fluid templates, not our customized ones
+#      210.renderObj = < tt_content
+#      210.renderObj.textmedia.templateRootPaths.20 =
+#
+#      // colPos 300 has different rendering for teasers, also disabling form fields in TCE
+#      300.renderObj = < tt_content
+#      300.renderObj.textmedia {
+#        templateRootPaths.30 = {$lib.website.path.fluidStyledContentTeaserTemplatesPath}
+#        layoutRootPaths.30 = {$lib.website.path.fluidStyledContentTeaserLayoutsPath}
+#        partialRootPaths.30 = {$lib.website.path.fluidStyledContentTeaserPartialsPath}
+#        templateName = FloatingTeaser
+#      }
+    }
+  }
+
+  // accordeon container
+  websitesAccordeonContainer < .websitesDefault
+  websitesAccordeonContainer.cObject.templateName = AccordeonContainer
+
+  // accordeon entry
+  websitesAccordeonEntry < .websitesDefault
+  websitesAccordeonEntry.cObject.templateName = AccordeonEntry
+
+  // skills
+  websitesSkills < .websitesDefault
+  websitesSkills.cObject.templateName = Skills
+
+  // testimonials
+  websitesTestimonials < .websitesDefault
+  websitesTestimonials.cObject.templateName = Testimonials
+
+  // news slider
+  websitesNewsslider < .websitesDefault
+  websitesNewsslider.cObject.templateName = Newsslider
+
+  // contact persons
+  websitesContactpersons < .websitesDefault
+  websitesContactpersons.cObject.templateName = Contactpersons
+
+  // content box
+  websitesContentbox < .websitesDefault
+  websitesContentbox.cObject.templateName = Contentbox
+
+  // teaser slider
+  websitesTeaserslider < .websitesDefault
+  websitesTeaserslider.cObject.templateName = Teaserslider
+
+}

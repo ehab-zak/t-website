@@ -1,0 +1,45 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+	  xmlns:f="http://xsd.helmut-hummel.de/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<f:section name="Main">
+	<header>
+		<div class="headline">
+			<div class="page-padding">
+				<div class="claim">
+					<f:cObject typoscriptObjectPath="lib.component.claim"/>
+				</div>
+				<div id="navi-toggle-mobile">
+					<button class="hamburger hamburger--spring toggle-main-navi" type="button">
+						<span class="hamburger-box">
+							<span class="hamburger-inner"></span>
+						</span>
+					</button>
+				</div>
+				<div id="navi-service">
+					<f:cObject typoscriptObjectPath="lib.navi.service"/>
+				</div>
+				<div id="navi-lang">
+					<f:cObject typoscriptObjectPath="lib.navi.language"/>
+				</div>
+				<button id="search-button"></button>
+				<div id="search-box">
+					<f:cObject typoscriptObjectPath="lib.component.searchbox"/>
+				</div>
+			</div>
+
+			<nav id="navi-main" role="navigation">
+				<div class="navi-box">
+					<div class="navi-center">
+						<f:cObject typoscriptObjectPath="lib.navi.main"/>
+					</div>
+				</div>
+				<div class="navi-shadow-disabled"></div>
+			</nav>
+			
+		</div>
+	</header>
+	<div class="header-shadow"></div>
+	<div id="navi-lightbox"></div>
+</f:section>
+
+</html>

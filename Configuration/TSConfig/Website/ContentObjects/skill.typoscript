@@ -1,0 +1,15 @@
+mod.wizards.newContentElement.wizardItems {
+	extra {
+		elements {
+			skill {
+				iconIdentifier = tx_websites_ctypes_skill
+				title = LLL:EXT:websites/Resources/Private/Language/locallang.xlf:customcontentobjects_skill_title
+				description = LLL:EXT:websites/Resources/Private/Language/locallang.xlf:customcontentobjects_skill_description
+				tt_content_defValues {
+					CType = skill
+				}
+			}
+		}
+		show = *
+	}
+}

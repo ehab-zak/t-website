@@ -1,0 +1,15 @@
+mod.wizards.newContentElement.wizardItems {
+	extra {
+		elements {
+			teaser {
+				iconIdentifier = tx_websites_ctypes_teaser
+				title = LLL:EXT:websites/Resources/Private/Language/locallang.xlf:customcontentobjects_teaser_title
+				description = LLL:EXT:websites/Resources/Private/Language/locallang.xlf:customcontentobjects_teaser_description
+				tt_content_defValues {
+					CType = teaser
+				}
+			}
+		}
+		show = *
+	}
+}

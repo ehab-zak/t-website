@@ -1,0 +1,82 @@
+plugin.tx_news {
+
+  view {
+    widget.GeorgRinger\News\ViewHelpers\Widget\PaginateViewHelper {
+      templateRootPath = EXT:websites/Resources/Private/Extensions/Website/News/Templates/
+    }
+  }
+  settings {
+                link {
+                        skipControllerAndAction = 1
+                }
+    defaultDetailPid = {$lib.website.pages.news.single}
+    backPid = {$lib.website.pages.news.list}
+
+    displayDummyIfNoMedia = 0
+
+    list {
+      media {
+        image.maxWidth = 295
+        image.maxHeight = 215
+      }
+      paginate {
+        insertAbove = 0
+        insertBelow = 1
+        prevNextHeaderTags = 1
+        maximumNumberOfLinks = 1000
+      }
+    }
+
+    detail {
+      media {
+        image.maxWidth = 295
+        image.maxHeight = 215
+      }
+    }
+  }
+
+  _LOCAL_LANG {
+    en {
+      more-link = more
+#      paginate_overall = Page %s of %s
+    }
+    de {
+      more-link = mehr
+#      paginate_overall = Seite %s von %s
+    }
+#    fr {
+#      more-link = Lire la suite
+#      paginate_overall = Page %s de %s
+#    }
+  }
+
+}
+
+### breadcrumb: show title of detail page as last entry
+#[globalVar = GP:tx_news_pi1|news > 0]
+#  lib.navi.breadcrumb.30 {
+#    includeNotInMenu = 1
+#  }
+#[end]
+
+/*
+### breadcrumb: show title of news as last entry
+lib.navi.breadcrumb.30.1.NO.allWrap {
+  override = <li class="path first">|</li> |*| <li class="path">|</li> |*| <li class="path">|</li>
+  override.if.isTrue.data = GP:tx_news_pi1|news
+}
+lib.navi.breadcrumb.50 = RECORDS
+lib.navi.breadcrumb.50 {
+  if.isTrue.data = GP:tx_news_pi1|news
+  dontCheckPid = 1
+  tables = tx_news_domain_model_news
+  source.data = GP:tx_news_pi1|news
+  source.intval = 1
+  conf.tx_news_domain_model_news = TEXT
+  conf.tx_news_domain_model_news {
+    field = title
+    htmlSpecialChars = 1
+    wrap = <li class="active">|</li>
+  }
+}
+*/

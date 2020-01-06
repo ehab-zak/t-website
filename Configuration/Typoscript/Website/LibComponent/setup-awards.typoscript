@@ -1,0 +1,15 @@
+### awards
+lib.component.awards {
+
+	innovationspreis = IMAGE
+	innovationspreis {
+		file = {$lib.website.path.siteRoot}/{$lib.system.awards.innovationspreis.file}
+		altText = {$lib.system.awards.innovationspreis.alt}
+		stdWrap.typolink {
+			parameter = {$lib.system.awards.innovationspreis.url}
+			title = {$lib.system.awards.innovationspreis.title}
+		}
+	}
+
+}
+

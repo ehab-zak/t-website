@@ -1,0 +1,32 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:f="http://xsd.helmut-hummel.de/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<f:section name="Main">
+    <div class="contact-section center-section ce-background-gradient" id="contact">
+        <div class="container page-padding">
+            <h4><f:translate key="textlabel_contact" extensionName="websites"/></h4>
+            <div class="contact-box">
+                <div class="contact-data">
+                    <div class="logo">
+                        <f:cObject typoscriptObjectPath="lib.contact.image"/>
+                    </div>
+                    <p class="company-address">
+                        <f:cObject typoscriptObjectPath="lib.contact.company"/><br />
+                        <f:cObject typoscriptObjectPath="lib.contact.address"/><br />
+                        <f:cObject typoscriptObjectPath="lib.contact.zip"/> <f:cObject typoscriptObjectPath="lib.contact.location"/>
+                    </p>
+                    <p class="company-contact">
+                        <f:translate key="textlabel_phone" extensionName="websites"/>: <f:cObject typoscriptObjectPath="lib.contact.phoneLink"/><br />
+                        <f:translate key="textlabel_fax" extensionName="websites"/>: <f:cObject typoscriptObjectPath="lib.contact.fax"/><br />
+                        <f:translate key="textlabel_email" extensionName="websites"/>: <f:cObject typoscriptObjectPath="lib.contact.mailLink"/>
+                    </p>
+                </div>
+                <div class="contact-form">
+                    <f:cObject typoscriptObjectPath="lib.form.contact"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</f:section>
+
+</html>

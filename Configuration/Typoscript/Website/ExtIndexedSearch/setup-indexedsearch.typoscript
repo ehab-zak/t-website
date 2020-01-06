@@ -1,0 +1,30 @@
+
+config {
+  index_enable = 1
+  index_externals = 1
+  index_metatags = 0
+}
+
+plugin.tx_indexedsearch {
+#  templateFile = EXT:st9setup/Resources/Private/Extensions/Website/IndexedSearch/template_css.html
+  view {
+    templateRootPaths.10 = EXT:websites/Resources/Private/Extensions/Website/IndexedSearch/Templates/
+    partialRootPaths.10 = EXT:websites/Resources/Private/Extensions/Website/IndexedSearch/Partials/
+  }
+
+  settings {
+    mediaList = pdf
+
+    defaultOptions {
+      extResume = 1
+      languageUid < lib.lang.uid.value
+    }
+
+    resultPage = {$lib.website.pages.searchResults}
+
+  }
+
+  _CSS_DEFAULT_STYLE >
+}
+
+

@@ -1,0 +1,163 @@
+/**
+ * mailform
+ */
+ul.formerrors{list-style-type:none;padding:4px;border:solid 2px #f00;color:#f00;}
+.mailform .form-group.do-not-enter{display:none;}
+.mailform .form-field{margin-bottom:10px;}
+.mailform .submit .form-field{margin-top:20px;text-align:center;}
+.mailform .submit input{font-family:"Titillium Web";font-size:16px;}
+.mailform .form-control{width:100%;resize:none;border:solid 1px #999;padding:3px 9px;font-family:"Titillium Web";font-size:16px;font-weight:300;color:#333;}
+.mailform .checkbox .form-control{display:block;float:left;width:auto;margin:4px 0 0;}
+.mailform .checkbox label{display:block;margin-left:20px;}
+.mailform .error .form-control{border-color:#f00;color:#f00;background-color:#fdd;}
+
+/**
+ * news
+ */
+.news-img-wrap{margin:20px 0;}
+.news-img-wrap a{display:block;}
+.news-img-wrap img{display:block;width:100%;height:auto;max-width:295px;}
+.news-single .article{margin:0 0 25px;}
+.news-single-date{display:block;}
+.news-single h1{margin-top:5px;}
+.news-single .news-text-wrap{display:block;font-size:22px;}
+.news-list.topborder{border-top:solid 1px #b2b2b2;}
+.news-list .article{border-bottom:solid 1px #b2b2b2;padding:49px 0 29px;}
+.news-list-date{display:block;}
+.news-list .news-img-wrap{margin-top:10px;margin-bottom:10px;}
+.news-list .header h2{margin-top:5px;margin-bottom:10px;font-size:23px;line-height:28px;font-weight:400;}
+.news-list .header h2 a,.news-list .header h2 a:hover{text-decoration:none;}
+.news-list .teaser-text{font-size:18px;line-height:24px;}
+.news-list .teaser-text a{color:#000;}
+.news-list .teaser-text a.more:after{font-weight:600;margin:-1px 0 0;vertical-align:middle;font-size:18px;line-height:12px;color:#d51224;}
+.news-list .teaser-text a:hover{color:#d51224;text-decoration:none;}
+.news-list .teaser-text a .more-label{margin-left:8px;color:#d51224;}
+.news-list .teaser-text p{display:inline;}
+.news-latest .news-img-wrap{margin-top:10px;margin-bottom:15px;}
+.news-latest .header h3{margin-top:0;font-size:18px;line-height:24px;font-weight:400;}
+.news-latest .header h3 a,.news-latest .header h3 a:hover{text-decoration:none;}
+.news-latest .teaser-text{display:none;}
+
+/**
+ * indexed_search
+ */
+.tx-indexedsearch-searchbox{margin:40px 0 20px;}
+.tx-indexedsearch-searchbox fieldset legend{display:none;}
+.tx-indexedsearch-searchbox .form-label{display:none;}
+.pagecontent ul.tx-indexedsearch-browsebox{margin:20px 0 40px;padding-left:0;}
+.pagecontent ul.tx-indexedsearch-browsebox>li{display:inline-block;margin-left:15px;}
+.pagecontent ul.tx-indexedsearch-browsebox>li:first-of-type{margin-left:0;}
+.pagecontent ul.tx-indexedsearch-browsebox>li::before{display:none;}
+.tx-indexedsearch-res{margin-bottom:30px;}
+.tx-indexedsearch-res:last-of-type{margin-bottom:0;}
+.tx-indexedsearch-res p.tx-indexedsearch-percent{float:right;margin-bottom:0;}
+.tx-indexedsearch-res h3{font-size:100%;font-weight:300;}
+.tx-indexedsearch-res p.tx-indexedsearch-description{margin-bottom:0;}
+.tx-indexedsearch-res dl.tx-indexedsearch-info dt,.tx-indexedsearch-res dl.tx-indexedsearch-info dd{display:inline-block;}
+.tx-indexedsearch-res .tx-indexedsearch-text-item-path p{margin-bottom:0;}
+
+@media only screen and (min-width:480px) {
+	.tx-indexedsearch-searchbox .form-group{display:inline-block;}
+	.tx-indexedsearch-searchbox .form-group.sword{width:316px;}
+	.tx-indexedsearch-searchbox .form-group.submit{margin-left:20px;}
+}
+
+@media only screen and (min-width:640px){
+	.mailform .submit .form-field{text-align:left;}
+}
+
+@media only screen and (min-width:768px){
+	.mailform .form-field{margin-bottom:14px;}
+	.mailform .submit .form-field{margin-top:30px;}
+	.mailform .submit input{font-size:20px;}
+	.mailform .form-control{font-size:18px;}
+	.mailform .checkbox .form-control{margin-top:7px;}
+	.news-list .article{padding-top:55px;padding-bottom:60px;overflow:hidden;}
+	.news-list .header h2{font-size:38px;line-height:46px;}
+	.news-list .news-img-wrap{float:left;}
+	.news-list .news-img-wrap img{width:199px;}
+	.news-list .news-img-wrap+.margin{margin-left:225px;}
+	.news-list .teaser-text{font-size:20px;line-height:28px;}
+	.news-latest .article{margin-bottom:30px;overflow:hidden;}
+	.news-latest .header h3{font-size:30px;line-height:36px;}
+	.news-latest .news-img-wrap{float:left;margin-top:0;margin-bottom:0;}
+	.news-latest .news-img-wrap img{width:230px;}
+	.news-latest .news-img-wrap+.margin{margin-left:270px;}
+	.news-latest .teaser-text{display:block;line-height:30px;}
+	.news-latest .teaser-text a{color:#000;}
+	.news-latest .teaser-text a:after{font-family:"BenchNine";font-weight:600;content:">";display:inline-block;margin:-1px 0 0 5px;vertical-align:middle;font-size:15px;line-height:12px;color:#d51224;}
+	.news-latest .teaser-text a:hover{color:#d51224;text-decoration:none;}
+	.news-latest .teaser-text p{display:inline;}
+}
+
+@media only screen and (min-width:1024px){
+	.mailform .form-group{position:relative;}
+	.mailform .form-field{margin-bottom:10px;}
+	.mailform .form-field.width-50{position:absolute;right:0;width:50%;padding-left:16px;display:inline-block;}
+	.mailform .form-field.width-50:first-child{position:relative;right:inherit;padding-left:0;padding-right:16px;}
+	.mailform .submit input{font-size:22px;}
+	.mailform .checkbox .form-control{margin-top:9px;}
+	.news-single h1{margin-top:18px;}
+	.news-single .news-img-wrap{float:left;margin:0;}
+	.news-single .news-img-wrap img{width:295px;}
+	.news-single .news-img-wrap+.news-text-wrap{margin-left:370px;}
+	.news-single .article{margin-bottom:94px;overflow:hidden;}
+	.news-list .article{padding-top:60px;padding-bottom:80px;}
+	.news-list .header h2{margin-bottom:25px;}
+	.news-list .news-img-wrap+.margin{margin-left:240px;}
+	.news-list .teaser-text{font-size:22px;line-height:32px;}
+	.news-list .teaser-text a:after{font-size:24px;}
+	.news-latest .news-img-wrap+.margin{margin-left:270px;}
+	.news-latest .header h3{font-size:34px;line-height:41px;}
+}
+.powermail_input.form-field.width-50:first-child {padding-left: 15px;}input#powermail_field_betreff {width: 100%;}
+input.powermail_submit {
+    display: inline-block;
+    padding: 10px 56px;
+    border: solid 1px #d51224;
+    background-color: #d51224;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 10px;
+    line-height: 18px;
+    font-weight: 400;
+    cursor: pointer;
+    font-size: 22px;
+}
+.form-control {
+    width: 100%;
+    resize: none;
+    border: solid 1px #999;
+    padding: 3px 9px;
+    font-family: "Titillium Web";
+    font-size: 18px;
+    font-weight: 300;
+    color: #333;
+}
+.powermail_field {
+    margin-bottom: 10px;
+}
+input#powermail_field_ihrname {
+    width: 48%;
+}
+.powermail_fieldwrap_ihree_mail_adresse {
+    width: 48%;
+    margin-right: 2%;
+    float: left;
+}
+.powermail_fieldwrap_ihretelefonnummeroptional {
+    width: 48%;
+    margin-left: 2%;
+    float: left;
+}
+.powermail_fieldwrap_ihree_mail_adresse .form-field.width-50 {
+	   width:100%; 
+}
+.powermail_fieldwrap_ihretelefonnummeroptional .form-field.width-50 {
+	
+	width: 95%;
+    margin-left: 5%;
+}
+.powermail_form_3 label, .powermail_form_3 legend, .powermail_form_3 h3 {
+    display: none;
+} 

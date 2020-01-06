@@ -1,0 +1,116 @@
+plugin.Tx_Formhandler.settings.predef.contact {
+
+  name.data = LLL:EXT:websites/Resources/Private/Language/locallang_formhandler.xlf:contact_name
+  formValuesPrefix = contact
+        formID = contact
+  templateFile = EXT:websites/Resources/Private/Extensions/Website/Formhandler/TemplateContact.html
+  langFile.1 = EXT:websites/Resources/Private/Language/locallang_formhandler.xlf
+
+
+    preProcessors {
+        1.class = Tx_Formhandler_PreProcessor_LoadDefaultValues
+        1.config {
+        }
+      }
+
+  markers {
+    formActionUrl = TEXT
+    formActionUrl.typolink {
+      parameter.data = page:uid
+      section = contact
+      returnLast = url
+    }
+  }
+
+  // does not work: https://forge.typo3.org/issues/75742
+  addErrorAnchors = 0
+  errorListTemplate {
+    totalWrap = <ul class="formerrors">|</ul>
+    singleWrap = <li>|</li>
+  }
+  isErrorMarker.default = TEXT
+  isErrorMarker.default.noTrimWrap = | |error|
+
+  validators {
+    1.class = Validator\DefaultValidator
+    1.config {
+      fieldConf {
+        name {
+          errorCheck.1 = required
+        }
+        email {
+          errorCheck.1 = required
+          errorCheck.2 = email
+#          errorCheck.3 = emailExists
+        }
+        subject {
+          errorCheck.1 = required
+        }
+        message {
+          errorCheck.1 = required
+        }
+        url {
+          errorCheck.1 = maxLength
+          errorCheck.1.value = 1
+        }
+      }
+    }
+  }
+
+  finishers {
+    1.class = Finisher\Mail
+    1.config {
+      limitMailsToUser = 5
+      admin {
+        to_email < lib.contact.mail
+        to_name = {$lib.system.company.name}
+        subject = {$lib.website.contact.subject}
+        sender_email = {$lib.system.company.mail}
+        sender_name = name
+        replyto_email = email
+      }
+      user {
+      }
+    }
+    2.class = Finisher\DB
+    2.config {
+      table = tt_address
+
+      // update
+      key = email
+      updateInsteadOfInsert = 1
+      insertIfNoUpdatePossible = 1
+
+      fields {
+        pid = {$lib.website.storage.newsletterRecipients}
+        tstamp.mapping = TEXT
+        tstamp.mapping.data = date:U
+        hidden = 0
+        deleted = 0
+        name.mapping = name
+        first_name.mapping = name
+        email.mapping = email
+        phone.mapping = phone
+        // html!
+        module_sys_dmail_html = 1
+      }
+    }
+
+    // disable DB finisher when newsletter is NOT ja|yes
+    2.disable = TEXT
+    2.disable{
+      value = 1
+      if.isInList.data = GP:contact|newsletter
+      if.value = ja,yes
+      if.negate = 1
+    }
+    3.class = Finisher\Redirect
+    3.config {
+      redirectPage = {$lib.website.pages.contactFormConfirmation}
+    }
+  }
+}
+
+lib.form.contact < styles.content.get
+      lib.form.contact.select.pidInList = 113
+lib.form.contact.settings < plugin.Tx_Formhandler.settings.predef.contact

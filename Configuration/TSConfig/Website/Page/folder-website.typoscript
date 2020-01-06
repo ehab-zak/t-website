@@ -1,0 +1,151 @@
+// for new pages set owner to group "Redaktion" (Uid=1)
+TCEMAIN.permissions {
+	groupid = 1
+	user = show,edit,delete,new,editcontent
+	group = show,edit,delete,new,editcontent
+	everybody = show
+}
+
+// extend sys_log
+TCEMAIN {
+	default.history.maxAgeDays = 0
+}
+
+// set flag for default langage
+mod.SHARED.defaultLanguageFlag = de
+// set label of default label in web modules
+mod.SHARED.defaultLanguageLabel = Deutsch
+// set label of default label in records
+TCEFORM.pages_language_overlay.sys_language_uid {
+	altLabels.0 = Deutsch
+}
+TCEFORM.tt_content.sys_language_uid {
+	altLabels.0 = Deutsch
+}
+
+// modules
+mod.web_info.menu.function.tx_cms_webinfo_hits = 0
+
+// new records
+mod.web_list.allowedNewTables = pages,tt_content,sys_note
+// on first/root level allow templates and domain records
+[treeLevel = 1]
+	mod.web_list.allowedNewTables := addToList(sys_template, sys_domain)
+[end]
+
+// configure TCE page
+TCEFORM.pages {
+	// hide unused fields
+	layout.disabled = 1
+	abstract.disabled = 1
+	author_email.disabled = 1
+	lastUpdated.disabled = 1
+	newUntil.disabled = 1
+	alias.disabled = 1
+	target.disabled = 1
+	// doktype 3 = external url
+	target.types.3.disabled = 0
+	editlock.disabled = 1
+	php_tree_stop.disabled = 1
+
+	// relabel subtitle
+	subtitle.label = LLL:EXT:websites/Resources/Private/Language/locallang.xlf:table_pages_subtitle_label
+
+	// grid layout of current page
+	#	backend_layout.removeItems = -1,pagets__st9setupStorageImageSlider,pagets__st9setupStorageReferenceSlider
+	// gridlayout of sub pages
+	#	backend_layout_next_level.removeItems = -1,pagets__st9setupStorageImageSlider,pagets__st9setupStorageReferenceSlider
+}
+
+// configure TCE page overlay
+TCEFORM.pages_language_overlay {
+	// hide unused fields
+	author.disabled = 1
+	author_email.disabled = 1
+}
+
+// configure TCE content
+TCEFORM.tt_content {
+	// hide unused fields
+	header_position.disabled = 1
+	subheader.disabled = 1
+	subheader.types.contactperson.disabled = 0
+	date.disabled = 1
+	header_link.disabled = 1
+	header_link.types.image.disabled = 0
+	header_link.types.linkbutton.disabled = 0
+	header_link.types.testimonial.disabled = 0
+	header_link.types.teaser.disabled = 0
+	linkToTop.disabled = 1
+	// layout
+	layout.disabled = 1
+	layout.types.textmedia {
+		disabled = 0
+		altLabels.1 = LLL:EXT:websites/Resources/Private/Language/locallang.xlf:table_ttcontent_textmedia_layout_background
+		altLabels.2 = LLL:EXT:websites/Resources/Private/Language/locallang.xlf:table_ttcontent_textmedia_layout_expert
+		removeItems = 3
+	}
+	// hide unused fields
+	imageborder.disabled = 1
+	image_compression.disabled = 1
+	image_effects.disabled = 1
+	image_noRows.disabled = 1
+	// display only possible Headers (default -> 2)
+	header_layout.removeItems = 1,2,4,5
+	header_layout.altLabels{
+		0 = LLL:EXT:websites/Resources/Private/Language/locallang.xlf:table_ttcontent_headerlayout_default
+		3 = LLL:EXT:websites/Resources/Private/Language/locallang.xlf:table_ttcontent_headerlayout_layout3
+	}
+
+	// remove floating text around images
+	// remove image above text with orientation right (1) and left (2)
+	imageorient.removeItems := addToList(1,2)
+	// remove image below text with orientation right (9) and left (10)
+	imageorient.removeItems := addToList(9,10)
+	// remove image within text block
+	imageorient.removeItems := addToList(17,18)
+	// set default number of imagecols to 1 instead of 2 (core default value)
+	imagecols.default = 1
+}
+
+#// hide flexform in gridelements
+#TCEFORM.tt_content.pi_flexform.types.gridelements_pi1.disabled = 1
+#
+#// define layout field
+#TCEFORM.tt_content.layout {
+#	// remove default fields
+#	removeItems = 1,2,3
+#}
+#[page|pid = 0]
+#	TCEFORM.tt_content.layout {
+#		// add custom layouts, previous done by section_frame
+#		addItems {
+#			background_grey = LLL:EXT:st9setup/Resources/Private/Language/locallang.xlf:content_layout_background_grey
+#		}
+#	}
+#[else]
+#	TCEFORM.tt_content.layout {
+#		// add custom layouts, previous done by section_frame
+#		addItems {
+#			background_grey = LLL:EXT:st9setup/Resources/Private/Language/locallang.xlf:content_layout_background_grey
+#			border_grey = LLL:EXT:st9setup/Resources/Private/Language/locallang.xlf:content_layout_border_grey
+#		}
+#		// add different dividers
+#		types.div {
+#			addItems {
+#				divider_new_optiongroup = - - - - - - - - - - - - - - - -
+#				divider_default = LLL:EXT:st9setup/Resources/Private/Language/locallang.xlf:content_layoutDiv_default
+#				divider_wide = LLL:EXT:st9setup/Resources/Private/Language/locallang.xlf:content_layoutDiv_wide
+#			}
+#		}
+#	}
+#[global]
+
+// define view defaults
+mod.web_view.previewFrameWidths >
+mod.web_view.previewFrameWidths {
+	320.label = LLL:EXT:viewpage/Resources/Private/Language/locallang.xlf:mobile
+	768.label = LLL:EXT:viewpage/Resources/Private/Language/locallang.xlf:tablet
+	1024.label = LLL:EXT:websites/Resources/Private/Language/locallang.xlf:mod_viewpage_desktop
+	1440.label = LLL:EXT:websites/Resources/Private/Language/locallang.xlf:mod_viewpage_widescreen
+}

@@ -1,0 +1,243 @@
+//---------------------------------------------
+// RTE configuration
+//---------------------------------------------
+
+// self explaining :-)
+RTE.default.defaultContentLanguage = de
+
+// buttons
+// hide: format text and block
+RTE.default.hideButtons := addToList(formatblock, blockstylelabel, blockstyle, textstylelabel, textstyle)
+// hide: tables
+RTE.default.hideButtons := addToList(table, toggleborders, tableproperties, rowproperties, rowinsertabove, rowinsertunder, rowdelete, rowsplit, columninsertbefore, columninsertafter, columndelete, columnsplit, cellproperties, cellinsertbefore, cellinsertafter, celldelete, cellsplit, cellmerge)
+// hide: text formats
+RTE.default.hideButtons := addToList(underline, italic, subscript, superscript, textcolor, bgcolor, textindicator)
+// show: text alignment
+RTE.default.showButtons := addToList(left, center, right, justifyfull)
+// show: functions and usability
+RTE.default.showButtons := addToList(unlink, findreplace, chMode, removeformat, copy, cut, paste, undo, redo, showhelp, about)
+
+// rendering definitions
+// define css for content rendering
+RTE.default.contentCSS = EXT:websites/Resources/Public/Website/Css/rte.css
+
+// generated markup
+// remove old and deprecated tags
+RTE.default.buttons.textstyle.tags.span.allowedClasses >
+RTE.default.proc.entryHTMLparser_db.removeTags := addToList(center, font, o:p, sdfield, strike)
+RTE.default.FE.proc.entryHTMLparser_db.removeTags := addToList(center, font, o:p, sdfield, strike)
+RTE.default.FE.removeTags := addToList(center, font, o:p, sdfield, strike)
+RTE.default.removeTags := addToList(center, font, o:p, sdfield, strike)
+// remove unwanted tags
+RTE.default.proc.entryHTMLparser_db.removeTags := addToList(abbr,acronym,address,bdo,big,blockquote,caption,cite,code,col,colgroup,del,dfn,h1,h2,h4,h5,h6,hr,img,ins,kbd,label,link,pre,q,samp,small,span,sub,sup,table,thead,tbody,tfoot,td,th,tr,tt,u,var)
+RTE.default.FE.proc.entryHTMLparser_db.removeTags := addToList(abbr,acronym,address,bdo,big,blockquote,caption,cite,code,col,colgroup,del,dfn,h1,h2,h4,h5,h6,hr,img,ins,kbd,label,link,pre,q,samp,small,span,sub,sup,table,thead,tbody,tfoot,td,th,tr,tt,u,var)
+RTE.default.FE.removeTags := addToList(abbr,acronym,address,bdo,big,blockquote,caption,cite,code,col,colgroup,del,dfn,h1,h2,h4,h5,h6,hr,img,ins,kbd,label,link,pre,q,samp,small,span,sub,sup,table,thead,tbody,tfoot,td,th,tr,tt,u,var)
+RTE.default.removeTags := addToList(abbr,acronym,address,bdo,big,blockquote,caption,cite,code,col,colgroup,del,dfn,h1,h2,h4,h5,h6,hr,img,ins,kbd,label,link,pre,q,samp,small,span,sub,sup,table,thead,tbody,tfoot,td,th,tr,tt,u,var)
+// remove unwanted attributes
+RTE.default.proc.entryHTMLparser_db.tags.span.allowedAttribs := removeFromList(style)
+RTE.default.proc.entryHTMLparser_db.tags.p.allowedAttribs := removeFromList(style)
+RTE.default.proc.entryHTMLparser_db.tags.hr.allowedAttribs := removeFromList(style)
+RTE.default.proc.entryHTMLparser_db.tags.b.allowedAttribs := removeFromList(style)
+RTE.default.proc.entryHTMLparser_db.tags.bdo.allowedAttribs := removeFromList(style)
+RTE.default.proc.entryHTMLparser_db.tags.big.allowedAttribs := removeFromList(style)
+RTE.default.proc.entryHTMLparser_db.tags.blockquote.allowedAttribs := removeFromList(style)
+RTE.default.proc.entryHTMLparser_db.tags.cite.allowedAttribs := removeFromList(style)
+RTE.default.proc.entryHTMLparser_db.tags.code.allowedAttribs := removeFromList(style)
+RTE.default.proc.entryHTMLparser_db.tags.del.allowedAttribs := removeFromList(style)
+RTE.default.proc.entryHTMLparser_db.tags.dfn.allowedAttribs := removeFromList(style)
+RTE.default.proc.entryHTMLparser_db.tags.em.allowedAttribs := removeFromList(style)
+RTE.default.proc.entryHTMLparser_db.tags.i.allowedAttribs := removeFromList(style)
+RTE.default.proc.entryHTMLparser_db.tags.ins.allowedAttribs := removeFromList(style)
+RTE.default.proc.entryHTMLparser_db.tags.kbd.allowedAttribs := removeFromList(style)
+RTE.default.proc.entryHTMLparser_db.tags.label.allowedAttribs := removeFromList(style)
+RTE.default.proc.entryHTMLparser_db.tags.q.allowedAttribs := removeFromList(style)
+RTE.default.proc.entryHTMLparser_db.tags.samp.allowedAttribs := removeFromList(style)
+RTE.default.proc.entryHTMLparser_db.tags.small.allowedAttribs := removeFromList(style)
+RTE.default.proc.entryHTMLparser_db.tags.strike.allowedAttribs := removeFromList(style)
+RTE.default.proc.entryHTMLparser_db.tags.strong.allowedAttribs := removeFromList(style)
+RTE.default.proc.entryHTMLparser_db.tags.sub.allowedAttribs := removeFromList(style)
+RTE.default.proc.entryHTMLparser_db.tags.sup.allowedAttribs := removeFromList(style)
+RTE.default.proc.entryHTMLparser_db.tags.tt.allowedAttribs := removeFromList(style)
+RTE.default.proc.entryHTMLparser_db.tags.u.allowedAttribs := removeFromList(style)
+RTE.default.proc.entryHTMLparser_db.tags.var.allowedAttribs := removeFromList(style)
+RTE.default.proc.entryHTMLparser_db.tags.div.allowedAttribs := removeFromList(style)
+
+// rewrite <b> to <strong> and <i> to <em>
+RTE.default.proc.exitHTMLparser_db.tags.b.remap = strong
+RTE.default.proc.exitHTMLparser.tags.b.remap = strong
+RTE.default.proc.exitHTMLparser_db.tags.i.remap = em
+RTE.default.proc.exitHTMLparser.tags.i.remap = em
+
+// links
+// external links only in new window and internal only in current
+RTE.classesAnchor {
+	externalLink >
+	internalLinkInNewWindow >
+}
+RTE.default.buttons.link.properties.class.allowedClasses := removeFromList(external-link, internal-link-new-window)
+// default classes
+RTE.classesAnchor.default {
+	page = internal-link
+	url = external-link-new-window
+	file = download
+	mail = mail
+}
+RTE.default.buttons.link {
+	page.properties.class.default = internal-link
+	url.properties.class.default = external-link-new-window
+	file.properties.class.default = download
+	mail.properties.class.default = mail
+}
+// default targets
+RTE.classesAnchor {
+	internalLink.target = _top
+	externalLinkInNewWindow.target = _blank
+}
+RTE.default.buttons.link {
+	page.properties.target.default = _top
+	url.properties.target.default = _blank
+}
+// disable popups
+RTE.default.buttons.link.popupSelector.disabled = 1
+
+// additional link for teaser
+RTE {
+	default {
+		buttons {
+			link.properties.class.allowedClasses := addToList(more)
+		}
+	}
+}
+ 
+RTE.classesAnchor {
+	more {
+		name = LLL:EXT:websites/Resources/Private/Language/locallang.xlf:rte_link_more
+		class = more
+		type = page
+		titleText = mehr
+	}
+}
+
+
+// enable span tags
+RTE.default.proc.entryHTMLparser_db.removeTags := removeFromList(span)
+RTE.default.FE.proc.entryHTMLparser_db.removeTags := removeFromList(span)
+RTE.default.FE.removeTags := removeFromList(span)
+RTE.default.removeTags := removeFromList(span)
+
+
+#// custom text colors using color selector (warning: requires span tag and enables styles attribute! )
+#// display button
+#RTE.default.showButtons := addToList(textcolor,textindicator)
+#RTE.default.hideButtons := removeFromList(textcolor,textindicator)
+#// disable color picker for web colors
+#RTE.default.disableColorPicker = 1
+#// available colors
+#RTE.default.colors = ci-main,default
+#// define colors
+#RTE.colors {
+#	ci-main {
+#		name = LLL:EXT:websites/Resources/Private/Language/locallang.xlf:rte_textcolor_ci-main
+#		value = #c03;
+#	}
+#	default {
+#		name = LLL:EXT:websites/Resources/Private/Language/locallang.xlf:rte_textcolor_default
+#		value = #000000;
+#	}
+#}
+#// overwrite tag and attribute configuration
+#RTE.default.proc.entryHTMLparser_db.tags.span.fixAttrib.style.unset >
+#RTE.default.proc.entryHTMLparser_db.tags.span.allowedAttribs := addToList(style)
+#RTE.default.proc.entryHTMLparser_db.tags.p.allowedAttribs := addToList(style)
+
+#// custom text styles using dropdown, here in use for text weight (warning: requires span tag! )
+#// display selector
+#RTE.default.showButtons := addToList(textstylelabel, textstyle)
+#RTE.default.hideButtons := removeFromList(textstylelabel, textstyle)
+#// make class valid
+#RTE.default.buttons.textstyle.tags.all.allowedClasses := addToList(textWeightRegular)
+#RTE.default.proc.allowedClasses := addToList(textWeightRegular)
+#RTE.default.FE.proc.allowedClasses := addToList(textWeightRegular)
+#// define text style class
+#RTE.classes {
+#	textWeightRegular {
+#		name = LLL:EXT:websites/Resources/Private/Language/locallang.xlf:rte_fontweight_regular
+#	}
+#}
+
+// feature: enable h3 tags in RTE for SEO purposes
+RTE.default.showButtons := addToList(formatblock)
+RTE.default.hideButtons := removeFromList(formatblock)
+RTE.default.buttons.formatblock.orderItems = p,h3
+
+// feature: custom classes for h3 (used in reference section)
+RTE.classes {
+	h3folder {
+		class = h3folder
+		name = LLL:EXT:websites/Resources/Private/Language/locallang.xlf:rte_classes_h3folder
+	}
+	h3info {
+		class = h3info
+		name = LLL:EXT:websites/Resources/Private/Language/locallang.xlf:rte_classes_h3info
+	}
+	h3toolbox {
+		class = h3toolbox
+		name = LLL:EXT:websites/Resources/Private/Language/locallang.xlf:rte_classes_h3toolbox
+	}
+	h3gear {
+		class = h3gear
+		name = LLL:EXT:websites/Resources/Private/Language/locallang.xlf:rte_classes_h3gear
+	}
+}
+RTE.default.hideButtons := removeFromList(blockstylelabel, blockstyle)
+RTE.default.showButtons := addToList(blockstylelabel, blockstyle)
+RTE.default.buttons.blockstyle.tags.h3.allowedClasses := addToList(h3folder,h3info,h3toolbox,h3gear)
+RTE.default.FE.buttons.blockstyle.tags.h3.allowedClasses := addToList(h3folder,h3info,h3toolbox,h3gear)
+
+#// additional link class for internal links
+#RTE.default.classesAnchor := addToList(internal-link-block)
+#RTE.default.buttons.link.properties.class.allowedClasses := addToList(internal-link-block)
+#// define link class
+#RTE.classesAnchor {
+#	internal-link-block {
+#		class = internal-link-block
+#		type = page
+#	}
+#}
+#
+#// feature: tables
+#// NOTICE: Don't forget to add custom classes to list of allowed entries in typoscript template! (lib.parseFunc_RTE.externalBlocks.table.stdWrap.HTMLparser.tags.table.fixAttrib.class.list)
+#RTE.default.hideButtons := removeFromList(table, toggleborders, tableproperties, rowproperties, rowinsertabove, rowinsertunder, rowdelete, rowsplit, columninsertbefore, columninsertafter, columndelete, columnsplit, cellproperties, cellinsertbefore, cellinsertafter, celldelete, cellsplit, cellmerge)
+#RTE.default.showButtons := addToList(table, toggleborders, tableproperties, rowproperties, rowinsertabove, rowinsertunder, rowdelete, rowsplit, columninsertbefore, columninsertafter, columndelete, columnsplit, cellproperties, cellinsertbefore, cellinsertafter, celldelete, cellsplit, cellmerge)
+#RTE.default.proc.entryHTMLparser_db.removeTags := removeFromList(table,thead,tbody,tfoot,td,th,tr)
+#RTE.default.FE.proc.entryHTMLparser_db.removeTags := removeFromList(table,thead,tbody,tfoot,td,th,tr)
+#RTE.default.FE.removeTags := removeFromList(table,thead,tbody,tfoot,td,th,tr)
+#RTE.default.removeTags := removeFromList(table,thead,tbody,tfoot,td,th,tr)
+#RTE.classes {
+#	csc-frame-frame1 >
+#	csc-frame-frame2 >
+#	contenttable {
+#		class = contenttable
+#		name = LLL:EXT:st9setup/Resources/Private/Language/locallang.xlf:rte_classes_contenttable
+#	}
+#	gridtable {
+#		class = gridtable
+#		name = LLL:EXT:st9setup/Resources/Private/Language/locallang.xlf:rte_classes_gridtable
+#	}
+#}
+#RTE.default.buttons.blockstyle.tags.table.allowedClasses := removeFromList(csc-frame-frame1, csc-frame-frame2)
+#RTE.default.FE.buttons.blockstyle.tags.table.allowedClasses := removeFromList(csc-frame-frame1, csc-frame-frame2)
+#RTE.default.buttons.blockstyle.tags.table.allowedClasses := addToList(contenttable,gridtable)
+#RTE.default.FE.buttons.blockstyle.tags.table.allowedClasses := addToList(contenttable,gridtable)
+#
+#// feature: custom lists
+#RTE.classes {
+#	bulletlist {
+#		class = bulletlist
+#		name = LLL:EXT:st9setup/Resources/Private/Language/locallang.xlf:rte_classes_bulletlist
+#	}
+#}
+#RTE.default.hideButtons := removeFromList(blockstylelabel, blockstyle)
+#RTE.default.showButtons := addToList(blockstylelabel, blockstyle)
+#RTE.default.buttons.blockstyle.tags.ul.allowedClasses := addToList(bulletlist)
+#RTE.default.FE.buttons.blockstyle.tags.ul.allowedClasses := addToList(bulletlist)

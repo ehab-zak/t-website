@@ -1,0 +1,74 @@
+lib.component.adaptivePicture = COA
+lib.component.adaptivePicture {
+
+  // render picture tag
+  10 = COA
+  10 {
+    wrap = <picture>|</picture>
+
+    // fallback
+    800 = FILES
+    800 {
+      references {
+        table = tt_content
+        fieldName = assets
+      }
+
+      begin = 3
+      maxItems = 1
+
+      renderObj = COA
+      renderObj {
+        10 = IMAGE
+        10 {
+          file.import.data = file:current:publicUrl
+        }
+      }
+    }
+
+    // widescreen - min-width = 1440
+    100 < .800
+    100 {
+
+      renderObj {
+        10 = IMG_RESOURCE
+        wrap = <source media="(min-width: 1440px)" srcset="|" >
+      }
+    }
+
+    // desktop - min-width = 1024
+    200 < .800
+    200 {
+      begin = 2
+
+      renderObj {
+        10 = IMG_RESOURCE
+        wrap = <source media="(min-width: 1024px)" srcset="|" >
+      }
+    }
+
+    // tablet - min-width = 768
+    300 < .800
+    300 {
+      begin = 1
+
+      renderObj {
+        10 = IMG_RESOURCE
+        wrap = <source media="(min-width: 768px)" srcset="|" >
+      }
+    }
+
+    // mobile - default
+    400 < .800
+    400 {
+      begin = 0
+
+      renderObj {
+        10 = IMG_RESOURCE
+        wrap = <source srcset="|" >
+      }
+    }
+
+  }
+
+}

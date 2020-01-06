@@ -1,0 +1,13 @@
+### searchbox
+lib.component.searchbox = FLUIDTEMPLATE
+lib.component.searchbox {
+  templateRootPaths {
+    10 = {$lib.website.path.templateRootPath}
+  }
+  templateName = Searchbox
+
+  settings {
+    resultPage = {$lib.website.pages.searchResults}
+    placeholder = {$lib.system.labels.searchbox.placeholder}
+  }
+}

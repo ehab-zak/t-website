@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='utf-8'?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2014-08-18T17:00:00Z" product-name="websites">
+        <header/>
+        <body>
+            <trans-unit id="yes">
+                <source>yes</source>
+            </trans-unit>
+            <trans-unit id="no">
+                <source>no</source>
+            </trans-unit>
+            <trans-unit id="contact_name">
+                <source>Contact form</source>
+            </trans-unit>
+
+	     <trans-unit id="privacy_policies1">
+			<source>I acknowledge that I have read, understood and accepted the information about the handling of personal data (</source>
+            </trans-unit>
+	     <trans-unit id="privacy_policies2">
+			<source>privacy policies</source>
+            </trans-unit>
+	     <trans-unit id="privacy_policies3">
+			<source>)</source>
+            </trans-unit>
+
+
+            <trans-unit id="name_placeholder">
+                <source>Your name:</source>
+            </trans-unit>
+            <trans-unit id="email_placeholder">
+                <source>Your email address:</source>
+            </trans-unit>
+            <trans-unit id="phone_placeholder">
+                <source>Your phone number (optional):</source>
+            </trans-unit>
+            <trans-unit id="subject_placeholder">
+                <source>Subject:</source>
+            </trans-unit>
+            <trans-unit id="message_placeholder">
+                <source>Your message:</source>
+            </trans-unit>
+            <trans-unit id="newsletter_label">
+                <source>Please register me for your newsletter.</source>
+            </trans-unit>
+            <trans-unit id="submit">
+                <source>Submit</source>
+            </trans-unit>
+
+            <trans-unit id="error_name_required">
+                <source>Please enter your name!</source>
+            </trans-unit>
+            <trans-unit id="error_email_required">
+                <source>Please enter your email adress!</source>
+            </trans-unit>
+            <trans-unit id="error_email_email">
+                <source>Please enter a valid email adress!</source>
+            </trans-unit>
+            <trans-unit id="error_email_emailExists">
+                <source>Please enter an email adress with valid domain!</source>
+            </trans-unit>
+            <trans-unit id="error_phone_required">
+                <source>Please enter your phone number!</source>
+            </trans-unit>
+            <trans-unit id="error_subject_required">
+                <source>Please enter the subject!</source>
+            </trans-unit>
+            <trans-unit id="error_message_required">
+                <source>Please enter your message!</source>
+            </trans-unit>
+            <trans-unit id="error_url_maxLength">
+                <source>Input not valid!</source>
+            </trans-unit>
+
+            <trans-unit id="mail_salutation">
+                <source>A new contact request from the website has been received</source>
+            </trans-unit>
+            <trans-unit id="mail_name">
+                <source>Name</source>
+            </trans-unit>
+            <trans-unit id="mail_email">
+                <source>Email adress</source>
+            </trans-unit>
+            <trans-unit id="mail_phone">
+                <source>Phone number</source>
+            </trans-unit>
+            <trans-unit id="mail_subject">
+                <source>Subject</source>
+            </trans-unit>
+            <trans-unit id="mail_message">
+                <source>Message</source>
+            </trans-unit>
+            <trans-unit id="mail_newsletter">
+                <source>Newsletter</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

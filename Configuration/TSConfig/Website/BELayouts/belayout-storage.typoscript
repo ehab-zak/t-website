@@ -1,0 +1,30 @@
+// defining backend layout for default (sub) page
+mod {
+	web_layout {
+		BackendLayouts {
+
+			websitesStorage {
+				title = LLL:EXT:websites/Resources/Private/Language/locallang.xlf:backendlayouts_storage_title
+				description = LLL:EXT:websites/Resources/Private/Language/locallang.xlf:backendlayouts_storage_description
+				config {
+					backend_layout {
+						colCount = 1
+						rowCount = 1
+						rows {
+							1 {
+								columns {
+									1 {
+										name = LLL:EXT:websites/Resources/Private/Language/locallang.xlf:layouts_column_content
+										colPos = 0
+									}
+								}
+							}
+						}
+					}
+				}
+				icon = EXT:websites/Resources/Public/Icons/BELayouts/storage.gif
+			}
+
+		}
+	}
+}

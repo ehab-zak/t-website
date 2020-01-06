@@ -1,0 +1,24 @@
+// defining background
+tx_gridelements.setup {
+
+	background {
+		title = LLL:EXT:websites/Resources/Private/Language/locallang.xlf:gridlayouts_background_title
+		description = LLL:EXT:websites/Resources/Private/Language/locallang.xlf:gridlayouts_background_description
+		config {
+			colCount = 1
+			rowCount = 1
+			rows {
+				1 {
+					columns {
+						1 {
+							name = LLL:EXT:websites/Resources/Private/Language/locallang.xlf:layouts_column_content
+							colPos = 116
+						}
+					}
+				}
+			}
+		}
+		icon = EXT:websites/Resources/Public/Icons/GridLayouts/background.gif
+	}
+
+}

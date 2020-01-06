@@ -1,0 +1,5 @@
+#### allow to clear complete (FE-)cache
+options.clearCache.pages = 1
+
+### hide upload-field in filebrowsers
+setup.override.edit_docModuleUpload = 0

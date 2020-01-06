@@ -1,0 +1,106 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+	  xmlns:f="http://xsd.helmut-hummel.de/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+{namespace ws=St9\Websites\ViewHelpers}
+<div id="c{data.uid}">
+	<f:switch expression="{data.layout}">
+
+		<f:case value="1">
+			<div class="ce-background">
+				<div class="wrapper">
+
+					<f:if condition="{gallery.position.noWrap} != 1">
+						<f:render partial="Header" arguments="{_all}" />
+					</f:if>
+
+					<div class="ce-textpic ce-{gallery.position.horizontal} ce-{gallery.position.vertical}{f:if(condition: gallery.position.noWrap, then: ' ce-nowrap')}">
+
+						<f:if condition="{gallery.position.vertical} != 'below'">
+							<f:render partial="MediaGallery" arguments="{_all}" />
+						</f:if>
+
+						<div class="ce-bodytext">
+							<f:if condition="{gallery.position.noWrap}">
+								<f:render partial="Header" arguments="{_all}" />
+							</f:if>
+							<f:if condition="{data.tx_websites_useParser}">
+								<f:then>
+									<f:format.html><ws:insertContactData>{data.bodytext}</ws:insertContactData></f:format.html>
+								</f:then>
+								<f:else>
+									<f:format.html>{data.bodytext}</f:format.html>
+								</f:else>
+							</f:if>
+						</div>
+
+						<f:if condition="{gallery.position.vertical} == 'below'">
+							<f:render partial="MediaGallery" arguments="{_all}" />
+						</f:if>
+
+					</div>
+
+				</div>
+			</div>
+		</f:case>
+
+		<f:case value="2">
+			<div class="ce-textpic ce-left ce-intext ce-nowrap ce-expert">
+
+				<f:render partial="MediaGallery" arguments="{_all}" />
+
+				<div class="ce-bodytext">
+
+					<f:render partial="Header" arguments="{_all}" />
+
+					<f:if condition="{data.tx_websites_useParser}">
+						<f:then>
+							<f:format.html><ws:insertContactData>{data.bodytext}</ws:insertContactData></f:format.html>
+						</f:then>
+						<f:else>
+							<f:format.html>{data.bodytext}</f:format.html>
+						</f:else>
+					</f:if>
+				</div>
+
+			</div>
+		</f:case>
+
+		<f:case default="true">
+
+			<f:if condition="{gallery.position.noWrap} != 1">
+				<f:render partial="Header" arguments="{_all}" />
+			</f:if>
+
+			<div class="ce-textpic ce-{gallery.position.horizontal} ce-{gallery.position.vertical}{f:if(condition: gallery.position.noWrap, then: ' ce-nowrap')}">
+
+				<f:if condition="{gallery.position.vertical} != 'below'">
+					<f:render partial="MediaGallery" arguments="{_all}" />
+				</f:if>
+
+				<div class="ce-bodytext">
+					<f:if condition="{gallery.position.noWrap}">
+						<f:render partial="Header" arguments="{_all}" />
+					</f:if>
+					<f:if condition="{data.tx_websites_useParser}">
+						<f:then>
+							<f:format.html><ws:insertContactData>{data.bodytext}</ws:insertContactData></f:format.html>
+						</f:then>
+						<f:else>
+							<f:format.html>{data.bodytext}</f:format.html>
+						</f:else>
+					</f:if>
+				</div>
+
+				<f:if condition="{gallery.position.vertical} == 'below'">
+					<f:render partial="MediaGallery" arguments="{_all}" />
+				</f:if>
+
+			</div>
+
+		</f:case>
+
+	</f:switch>
+
+	<f:render partial="Footer" arguments="{_all}" />
+</div>
+</html>

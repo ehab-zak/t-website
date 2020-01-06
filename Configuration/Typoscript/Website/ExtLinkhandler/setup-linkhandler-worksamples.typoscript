@@ -1,0 +1,12 @@
+plugin.tx_linkhandler.tx_worksamples {
+
+	// Do not force link generation when the news records are hidden or deleted.
+	forceLink = 0
+
+	typolink {
+		parameter = {$lib.website.pages.worksamples.single}
+		additionalParams = &tx_worksample_worksample[reference]={field:uid}
+		additionalParams.insertData = 1
+		useCacheHash = 1
+	}
+}

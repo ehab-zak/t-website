@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2014-08-18T17:05:00Z" product-name="websites" target-language="de">
+        <header/>
+        <body>
+            <trans-unit id="tt_content.tabs.behaviour" approved="yes">
+                <source>Behaviour</source>
+                <target state="translated">Verhalten</target></trans-unit>
+
+            <trans-unit id="tt_content.tx_websites_useParser" approved="yes">
+                <source>Use parser for contact information:</source>
+                <target state="translated">Parser für Kontaktinformationen verwenden:</target></trans-unit>
+        </body>
+    </file>
+</xliff>

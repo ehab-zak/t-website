@@ -1,0 +1,18 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+	  xmlns:f="http://xsd.helmut-hummel.de/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+
+<f:layout name="HeaderContentFooter" />
+
+<f:section name="content">
+	<div class="image">
+		<f:alias map="{image:gallery.rows.1.columns.1}">
+			<f:media file="{image.media}"
+					 alt="{image.media.alternative}"
+					 title="{image.media.title}"
+					/>
+		</f:alias>
+	</div>
+</f:section>
+
+</html>

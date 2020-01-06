@@ -1,0 +1,15 @@
+mod.wizards.newContentElement.wizardItems {
+	extra {
+		elements {
+			contactperson {
+				iconIdentifier = tx_websites_ctypes_contactperson
+				title = LLL:EXT:websites/Resources/Private/Language/locallang.xlf:customcontentobjects_contactperson_title
+				description = LLL:EXT:websites/Resources/Private/Language/locallang.xlf:customcontentobjects_contactperson_description
+				tt_content_defValues {
+					CType = contactperson
+				}
+			}
+		}
+		show = *
+	}
+}

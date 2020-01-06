@@ -1,0 +1,68 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+	  xmlns:f="http://xsd.helmut-hummel.de/ns/TYPO3/CMS/Fluid/ViewHelpers">
+<head>
+	<meta charset="UTF-8">
+	<title>contact form</title>
+</head>
+<body>
+
+<!-- ###TEMPLATE_FORM1### begin -->
+<div name="contact">
+	<form id="contactform" method="post" action="###formActionUrl###" enctype="multipart/form-data" class="mailform">
+		<fieldset>
+			<div class="form-group">
+				<div class="form-field width-50###is_error_name###">
+					<input type="text" name="###formValuesPrefix###[name]" placeholder="###LLL:name_placeholder###" id="contactform-name" value="###value_name###" class="form-control"/>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="form-field width-50###is_error_email###">
+					<input type="text" name="###formValuesPrefix###[email]" placeholder="###LLL:email_placeholder###" id="contactform-email" value="###value_email###" class="form-control"/>
+				</div>
+				<div class="form-field width-50###is_error_phone###">
+					<input type="text" name="###formValuesPrefix###[phone]" placeholder="###LLL:phone_placeholder###" id="contactform-phone" value="###value_phone###" class="form-control"/>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="form-field width-100###is_error_subject###">
+					<input type="text" name="###formValuesPrefix###[subject]" placeholder="###LLL:subject_placeholder###" id="contactform-subject" value="###value_subject###" class="form-control"/>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="form-field width-100###is_error_message###">
+					<textarea name="###formValuesPrefix###[message]" placeholder="###LLL:message_placeholder###" id="contactform-message" cols="30" rows="6" class="form-control">###value_message###</textarea>
+				</div>
+			</div>
+			<div class="form-group do-not-enter">
+				<div class="form-field width-100###is_error_url###">
+					<input type="text" name="###formValuesPrefix###[url]" id="contactform-url" value="###value_url###" class="form-control"/>
+				</div>
+			</div>
+			<div class="form-group submit">
+				<div class="form-field width-100">
+					<input type="submit" value="###LLL:submit###" ###submit_nextStep### class="linkbutton"/>
+				</div>
+			</div>
+		</fieldset>
+	</form>
+</div>
+<!-- ###TEMPLATE_FORM1### end -->
+
+
+<!-- ###TEMPLATE_EMAIL_USER_PLAIN### begin -->
+<!-- ###TEMPLATE_EMAIL_USER_PLAIN### end -->
+
+<!-- ###TEMPLATE_EMAIL_ADMIN_PLAIN### begin -->
+###LLL:mail_salutation###:
+
+###LLL:mail_name###: ###value_name###
+###LLL:mail_email###: ###value_email###
+###LLL:mail_phone###: ###value_phone###
+###LLL:mail_subject###: ###value_subject###
+###LLL:mail_message###: ###value_message###
+###LLL:mail_newsletter###: ###value_newsletter###
+<!-- ###TEMPLATE_EMAIL_ADMIN_PLAIN### end -->
+
+
+</body>
+</html>

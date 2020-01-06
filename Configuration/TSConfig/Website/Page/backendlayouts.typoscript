@@ -1,0 +1,10 @@
+// defining backend layouts
+
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/TSConfig/Website/BELayouts/belayout-storage.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/TSConfig/Website/BELayouts/belayout-storageimageslider.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/TSConfig/Website/BELayouts/belayout-default.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/TSConfig/Website/BELayouts/belayout-root.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/TSConfig/Website/BELayouts/belayout-detailplugin.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/TSConfig/Website/BELayouts/belayout-noimage.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/TSConfig/Website/BELayouts/belayout-contact.typoscript">
+#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/TSConfig/Website/BELayouts/belayout-glossary.typoscript">

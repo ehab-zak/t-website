@@ -1,0 +1,64 @@
+h1{margin:20px 0 20px;padding:0;font-weight:400;font-size:23px;line-height:28px;color:#000;}
+h2{margin:40px 0 20px;padding:0;font-weight:300;font-size:22px;line-height:120%;color:#000;}
+h3{margin:20px 0;padding:0;font-weight:600;font-size:16px;line-height:22px;color:#000;}
+h3.h3folder{background:url('/typo3conf/ext/websites/Resources/Public/Website/Images/Layout/Ordner.png') no-repeat left center;background-size:auto 20px;padding-left:30px;}
+h3.h3info{background:url('/typo3conf/ext/websites/Resources/Public/Website/Images/Layout/info.png') no-repeat left center;background-size:auto 20px;padding-left:30px;}
+h3.h3toolbox{background:url('/typo3conf/ext/websites/Resources/Public/Website/Images/Layout/Werkzeug.png') no-repeat left center;background-size:auto 20px;padding-left:30px;}
+h3.h3gear{background:url('/typo3conf/ext/websites/Resources/Public/Website/Images/Layout/Zahnrad2.png') no-repeat left center;background-size:auto 20px;padding-left:30px;}
+p{margin-bottom:10px;}
+strong{font-weight:800;}
+.ci-black{color:#000;}
+.ci-main{color:#d51224;}
+.text-right{text-align:right;}
+.align-left{text-align:left;}
+.align-right{text-align:right;}
+.align-center{text-align:center;}
+.align-justify{text-align:justify;}
+ul{list-style-type:disc;padding-left:20px;margin-bottom:16px;line-height:32px;}
+.pagecontent ul{list-style-type:none;padding-left:25px;margin-top:20px;margin-bottom:20px;}
+.pagecontent ul>li:before{content:"";margin-left:-15px;margin-right:9px;margin-bottom:2px;display:inline-block;width:6px;height:6px;background:#276681;border:solid 1px #276681;border-radius:100%;}
+.pagecontent ul.slides>li::before,.pagecontent ul.prev-next>li::before{content:none;}
+ul ul,ol ul{list-style-type:circle;}
+.pagecontent ul ul,.content ol ul{list-style-type:none;}
+.pagecontent ul ul>li:before,.content ol ul>li:before{background:#276681;}
+ol{list-style-type:decimal;padding-left:24px;margin-bottom:16px;}
+ol ol,ul ol{list-style-type:lower-alpha;}
+a,a:active,a:focus,button,button:active,button:focus{color:#d51224;text-decoration:none;outline:none;}
+a:hover{text-decoration:underline;}
+a.more:after,a.external-link-new-window:after{font-family:"BenchNine";display:inline-block;padding:0 5px;content:'>';}
+/*a.external-link-new-window{padding-left:11px;background:url("/typo3conf/ext/websites/Resources/Public/Website/Images/Layout/arrow_external_link.png") no-repeat 0 6px;}*/
+span.at:after{content:"@";}
+.root h1{margin-top:40px;}
+.root h2{font-weight:400;font-size:23px;line-height:28px;}
+
+@media only screen and (min-width:768px){
+	h1{margin-top:80px;font-size:38px;line-height:46px;}
+	h2{font-size:38px;line-height:46px;}
+	h3{font-size:20px;line-height:30px;}
+	h3.h3folder{background-size:auto 28px;padding-left:38px;}
+	h3.h3info{background-size:auto 28px;padding-left:38px;}
+	h3.h3toolbox{background-size:auto 28px;padding-left:38px;}
+	h3.h3gear{background-size:auto 28px;padding-left:38px;}
+	p{margin-bottom:20px;}
+	ul{line-height:40px;}
+	.pagecontent ul{margin-bottom:35px;padding-left:35px;}
+	.pagecontent ul>li:before{margin-left:-20px;margin-right:7px;margin-bottom:1px;width:9px;height:9px;}
+	.root h1{margin-top:80px;}
+	.root h2{font-size:38px;line-height:46px;}
+}
+
+@media only screen and (min-width:1024px){
+	h1{margin-top:52px;margin-bottom:34px;font-size:42px;line-height:54px;}
+	h2{font-size:30px;line-height:36px;}
+	h3{font-size:22px;line-height:32px;margin-top:38px;margin-bottom:30px;}
+	h3.h3folder{background-size:auto 31px;padding-left:41px;}
+	h3.h3info{background-size:auto 31px;padding-left:41px;}
+	h3.h3toolbox{background-size:auto 31px;padding-left:41px;}
+	h3.h3gear{background-size:auto 31px;padding-left:41px;}
+	ul{line-height:44px;}
+	.pagecontent ul{margin-bottom:50px;padding-left:45px;}
+	.pagecontent ul>li:before{margin-left:-30px;margin-right:18px;margin-bottom:2px;width:12px;height:12px;}
+	/*a.external-link-new-window{background-position:0 8px;}*/
+	.root h1{margin-top:52px;}
+	.root h2{margin-top:46px;margin-bottom:38px;font-size:42px;line-height:50px;}
+}

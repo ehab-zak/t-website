@@ -1,0 +1,11 @@
+//---------------------------------------------
+// NEWS configuration
+//---------------------------------------------
+
+// template layouts for news
+tx_news.templateLayouts {
+	list = LLL:EXT:websites/Resources/Private/Language/locallang.xlf:news_templatelayout_list
+	detaillatest = LLL:EXT:websites/Resources/Private/Language/locallang.xlf:news_templatelayout_detaillatest
+	detailsingle = LLL:EXT:websites/Resources/Private/Language/locallang.xlf:news_templatelayout_detailsingle
+	latest = LLL:EXT:websites/Resources/Private/Language/locallang.xlf:news_templatelayout_latest
+}

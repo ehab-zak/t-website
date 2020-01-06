@@ -1,0 +1,63 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+	  xmlns:f="http://xsd.helmut-hummel.de/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+
+{namespace ic=St9\Imageclip\ViewHelpers}
+<f:layout name="Default"/>
+
+<f:section name="Main">
+	<f:if condition="{clip}">
+		<f:then>
+			<ic:includeFile path="{settings.cssFile}"/>
+			<ic:includeFile path="{settings.jsFile}"/>
+			<div id="imageclip-placeholder">
+				<ic:renderPlaceholder imageData="{clip.imagesSorted}" altText="{f:translate(key:'placeholder')}"></ic:renderPlaceholder>
+			</div>
+			<div id="imageclip-preview">
+				<picture title="{clip.imagetitle}">
+					<f:for each="{clip.imagesSorted}" as="image">
+						<f:if condition="{image.txImageclipMinwidth} > 0">
+							<f:then>
+								<ic:source
+										srcset="{f:uri.image(src: '{image.originalResource.publicUrl}', width: '{image.txImageclipWidth}')}"
+										media="min-width: {image.txImageclipMinwidth}"/>
+							</f:then>
+							<f:else>
+								<source srcset="{f:uri.image(src: '{image.originalResource.publicUrl}', width: '{image.txImageclipWidth}')}"/>
+								<f:image src="{image.originalResource.publicUrl}" width="{image.txImageclipWidth}"
+										 title="{clip.imagetitle}" alt="{clip.imagealt}"/>
+							</f:else>
+						</f:if>
+					</f:for>
+				</picture>
+			</div>
+			<div id="imageclip-movie">
+				<video id="imageclip-box"></video>
+				<div id="imageclip-signet">
+					<f:cObject typoscriptObjectPath="lib.component.experience.signet_imageclip"/>
+				</div>
+				<button id="imageclip-play" type="button" onclick="buttonPlayImageclip()">
+					<div id="imageclip-play-bg">
+						<div id="imageclip-play-fg"></div>
+					</div>
+				</button>
+			</div>
+			<ic:addInlineJS>
+				var imageclipMovies = Array();
+				<f:for each="{clip.moviesSorted}" as="movie" iteration="iterator">
+					imageclipMovies[{iterator.index}] = Array();
+					imageclipMovies[{iterator.index}][0] = "{movie.txImageclipMinwidth}";
+					imageclipMovies[{iterator.index}][1] = "{movie.originalResource.publicUrl}";
+					imageclipMovies[{iterator.index}][2] = "{movie.txImageclipWidth}";
+					imageclipMovies[{iterator.index}][3] = "{movie.txImageclipHeight}";
+				</f:for>
+				initializeImageclip();
+			</ic:addInlineJS>
+		</f:then>
+		<f:else>
+			Error: No image clip found!
+		</f:else>
+	</f:if>
+</f:section>
+
+</html>

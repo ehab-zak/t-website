@@ -1,0 +1,42 @@
+config {
+	no_cache = 1
+
+	index_enable = 0
+	index_externals = 0
+	index_metatags = 0
+
+	minifyCSS = 0
+	minifyJS = 0
+	concatenateCss = 0
+	concatenateJs = 0
+}
+
+page.includeCSS {
+}
+
+page.cssInline {
+	10.file = {$lib.website.path.siteRoot}/Css/inline.css
+	20.file = {$lib.website.path.siteRoot}/Css/imageclip.css
+	30.file = {$lib.website.path.siteRoot}/Css/content.css
+}
+
+page.headerData {
+	999999.20.value = {$lib.website.path.picturefill_3_0_js_dev}
+}
+
+page.includeJSFooterlibs {
+	jquery_js = {$lib.website.path.jquery_2_2_js_dev}
+	flexslider_js = {$lib.website.path.flexslider_2_5_js_dev}
+#	fullpage_js = {$lib.website.path.fullpage_2_8_js_dev}
+}
+
+page.includeJSFooter {
+	scripts = {$lib.website.path.scripts_js_dev}
+	spamprotection = {$lib.website.path.spamprotection_js_dev}
+}
+
+plugin.tx_imageclip {
+	settings {
+		jsFile = EXT:imageclip/Resources/Public/JavaScript/imageclip.js
+	}
+}

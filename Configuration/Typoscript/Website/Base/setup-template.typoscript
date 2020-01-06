@@ -1,0 +1,161 @@
+### PAGE (SCREEN)
+
+page = PAGE
+page.typeNum = 0
+
+page.meta {
+  description < lib.meta.description
+  keywords < lib.meta.keywords
+  title < lib.meta.title
+  author < lib.meta.author
+  date < lib.meta.date
+  robots < lib.meta.robots
+  copyright < lib.meta.copyright
+  language < lib.meta.language
+  revisit-after < lib.meta.revisit
+}
+
+page.shortcutIcon = {$lib.website.path.favicon}
+
+page.includeCSS {
+  font_titilliumweb = https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600
+  font_titilliumweb.external = 1
+  font_titilliumweb.excludeFromConcatenation = 1
+  font_titilliumweb.disableCompression = 1
+
+#  font_jura = https://fonts.googleapis.com/css?family=Jura:300,600
+#  font_jura.external = 1
+#  font_jura.excludeFromConcatenation = 1
+#  font_jura.disableCompression = 1
+}
+
+page.cssInline {
+#  10 = FILE
+#  10.file = {$lib.website.path.siteRoot}/Css/inline.min.css
+
+#  20 = FILE
+#  20.file = {$lib.website.path.siteRoot}/Css/imageclip.min.css
+
+#  30 = FILE
+#  30.file = {$lib.website.path.siteRoot}/Css/content.min.css
+
+}
+
+// is included as inline above
+plugin.tx_imageclip.settings.cssFile >
+
+// EXT:improvepagespeed
+#page.includeAsynCSS {
+page.includeCSS {
+  inline = {$lib.website.path.siteRoot}/Css/inline.min.css
+
+  imageclip = {$lib.website.path.siteRoot}/Css/imageclip.min.css
+
+  content = {$lib.website.path.siteRoot}/Css/content.min.css
+
+  page = {$lib.website.path.siteRoot}/Css/page-screen.css
+  page.media = screen
+
+  ext = {$lib.website.path.siteRoot}/Css/ext.css
+  ext.media = screen
+
+  font_merriweather = https://fonts.googleapis.com/css?family=Merriweather:300
+  font_merriweather.external = 1
+  font_merriweather.excludeFromConcatenation = 1
+  font_merriweather.disableCompression = 1
+
+  // we only need "<>+-":
+  font_benchnine = https://fonts.googleapis.com/css?family=BenchNine:300,700&text=%3C%3E%2B-%E2%80%94
+  font_benchnine.external = 1
+  font_benchnine.excludeFromConcatenation = 1
+  font_benchnine.disableCompression = 1
+}
+
+/*
+picturefill should be loaded directly in the header of page, this is the only possible way to build the required
+two javascripts in this order
+src: http://scottjehl.github.io/picturefill/ -> "Getting Started with Picturefill"
+*/
+page.headerData {
+  999997 = TEXT
+  999997.value = <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  999998 = COA
+  999998 {
+
+    10 = TEXT
+    10 {
+      wrap = <script type="text/javascript">|</script>
+      value = document.createElement("picture");
+    }
+
+    20 = TEXT
+    20 {
+      wrap = <script src="|" type="text/javascript" async></script>
+      value = {$lib.website.path.picturefill_3_0_js}
+    }
+
+  }
+       
+  999999 < lib.tracking.ga
+
+}
+
+page.includeJSFooterlibs {
+  jquery_js = {$lib.website.path.jquery_2_2_js}
+  jquery_js.forceOnTop = 1
+
+  flexslider_js = {$lib.website.path.flexslider_2_5_js}
+  flexslider_js.async = 1
+
+  // disabled sp-27.06.2016 - not operable
+  //fullpage_js = {$lib.website.path.fullpage_2_8_js}
+  //fullpage_js.async = 1
+}
+
+page.includeJSFooter {
+  scripts = {$lib.website.path.scripts_js}
+  scripts.async = 1
+  spamprotection = {$lib.website.path.spamprotection_js}
+  spamprotection.async = 1
+}
+
+page.10 = FLUIDTEMPLATE
+page.10 {
+  templateRootPaths {
+    10 = {$lib.website.path.templateRootPath}
+  }
+  layoutRootPaths {
+    10 = {$lib.website.path.layoutRootPath}
+  }
+  partialRootPaths {
+    10 = {$lib.website.path.partialRootPath}
+  }
+  templateName.stdWrap.cObject = CASE
+  templateName.stdWrap.cObject {
+    key.data = pagelayout
+
+    default = TEXT
+    default.value = ScreenDefault
+
+    pagets__websitesDefault < .default
+
+    pagets__websitesContact = TEXT
+    pagets__websitesContact.value = ScreenContact
+
+    pagets__websitesRoot = TEXT
+    pagets__websitesRoot.value = ScreenRoot
+
+    pagets__websitesDetailplugin = TEXT
+    pagets__websitesDetailplugin.value = ScreenDetailplugin
+#
+#    pagets__websitesNoimage = TEXT
+#    pagets__websitesNoimage.value = ScreenNoimage
+#
+#    pagets__websitesGlossary = TEXT
+#    pagets__websitesGlossary.value = ScreenGlossary
+  }
+
+  settings.features < lib.features
+}
+

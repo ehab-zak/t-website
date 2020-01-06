@@ -1,0 +1,15 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+	  xmlns:f="http://xsd.helmut-hummel.de/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<f:section name="Main">
+	<ul>
+		<li class="copyright">&copy; <f:format.date format="%Y">now</f:format.date> <f:cObject typoscriptObjectPath="lib.contact.company"/></li>
+		<li class="phone"><f:translate key="textlabel_phone_short" extensionName="websites"/>: <f:cObject typoscriptObjectPath="lib.contact.phoneLink"/></li>
+		<f:cObject typoscriptObjectPath="lib.navi.footeritems"/>
+	</ul>
+	<div class="totop">
+		<a href="#"><f:translate key="textlabel_totop" extensionName="websites"/></a>
+	</div>
+</f:section>
+
+</html>

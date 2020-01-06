@@ -1,0 +1,49 @@
+// global definition of contact data
+lib.contact {
+  company = TEXT
+  company.value = {$lib.system.company.name}
+
+  address = TEXT
+  address.value = {$lib.system.company.address}
+
+  zip = TEXT
+  zip.value = {$lib.system.company.zip}
+
+  location = TEXT
+  location.value = {$lib.system.company.location}
+  location.lang.en = {$lib.system.company.location.en}
+
+  phone = TEXT
+  phone.value = {$lib.system.company.phone}
+
+  phoneLink = TEXT
+  phoneLink {
+    value = {$lib.system.company.phone}
+    wrap = <a href="tel://{$lib.system.company.phoneUrl}" class="phonelink">|</a>
+  }
+
+  fax = TEXT
+  fax.value = {$lib.system.company.fax}
+
+  mail = TEXT
+  mail.value = {$lib.system.company.mail}
+
+  mailLink = TEXT
+  mailLink {
+    value = {$lib.system.company.mail}
+    typolink {
+      parameter = {$lib.system.company.mail}
+      ATagParams = class="maillink"
+    }
+  }
+
+  image = IMAGE
+  image {
+    file = {$lib.website.path.siteRoot}/{$lib.system.company.image}
+    file {
+      width = 201
+    }
+    altText = {$lib.system.company.name}
+  }
+
+}

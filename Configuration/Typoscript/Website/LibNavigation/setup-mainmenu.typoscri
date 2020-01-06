@@ -1,0 +1,7 @@
+lib.navi.main = COA
+lib.navi.main {
+	wrap = <ul class="level-1" role="menu">|</ul>
+	10 < lib.navi.mainitems
+	20 < lib.navi.searchitem
+	30 < lib.navi.serviceitems
+}

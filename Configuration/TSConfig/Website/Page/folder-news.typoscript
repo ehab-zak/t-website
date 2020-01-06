@@ -1,0 +1,41 @@
+// new records
+mod.web_list.allowedNewTables = tx_news_domain_model_news,sys_category,sys_note
+
+// clear cache with news items
+TCEMAIN.clearCacheCmd = 1,64,66,495
+
+// configure news record
+TCEFORM.tx_news_domain_model_news {
+	// hide unused fields
+	istopnews.disabled = 1
+	type.disabled = 1
+
+	// relabel teaser
+	teaser.label = LLL:EXT:websites/Resources/Private/Language/locallang.xlf:table_news_teaser_label
+
+	// hide unused fields
+	author.disabled = 1
+	author_email.disabled = 1
+	archive.disabled = 1
+	tags.disabled = 1
+	fal_related_files.disabled = 1
+	related_links.disabled = 1
+	related.disabled = 1
+	related_from.disabled = 1
+}
+
+// preview news record on detail pid
+TCEMAIN.preview {
+	tx_news_domain_model_news {
+		previewPageId = 64
+		useDefaultLanguageRecord = 0
+		fieldToParameterMap {
+			uid = tx_news_pi1[news]
+		}
+		additionalGetParameters {
+			tx_news_pi1.controller = News
+			tx_news_pi1.action = detail
+		}
+	}
+}
+

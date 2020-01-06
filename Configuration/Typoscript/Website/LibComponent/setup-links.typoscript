@@ -1,0 +1,71 @@
+### links
+lib.component.links {
+
+	expoGate = IMAGE
+	expoGate {
+		file = {$lib.website.path.siteRoot}/{$lib.system.links.expoGate.file}
+		altText = {$lib.system.links.expoGate.alt}
+		stdWrap.typolink {
+			parameter = {$lib.system.links.expoGate.url}
+			extTarget = _blank
+			title = {$lib.system.links.expoGate.title}
+		}
+	}
+
+	typo3 = IMAGE
+	typo3 {
+		file = {$lib.website.path.siteRoot}/{$lib.system.links.typo3.file}
+		altText = {$lib.system.links.typo3.alt}
+		stdWrap.typolink {
+			parameter = {$lib.system.links.typo3.url}
+			extTarget = _blank
+			title = {$lib.system.links.typo3.title}
+		}
+	}
+
+	wp = IMAGE
+	wp {
+		file = {$lib.website.path.siteRoot}/{$lib.system.links.wp.file}
+		altText = {$lib.system.links.wp.alt}
+		stdWrap.typolink {
+			parameter = {$lib.system.links.wp.url}
+			extTarget = _blank
+			title = {$lib.system.links.wp.title}
+		}
+	}
+
+	mukit = IMAGE
+	mukit {
+		file = {$lib.website.path.siteRoot}/{$lib.system.links.mukit.file}
+		altText = {$lib.system.links.mukit.alt}
+		stdWrap.typolink {
+			parameter = {$lib.system.links.mukit.url}
+			extTarget = _blank
+			title = {$lib.system.links.mukit.title}
+		}
+	}
+
+	ihk = IMAGE
+	ihk {
+		file = {$lib.website.path.siteRoot}/{$lib.system.links.ihk.file}
+		altText = {$lib.system.links.ihk.alt}
+		stdWrap.typolink {
+			parameter = {$lib.system.links.ihk.url}
+			extTarget = _blank
+			title = {$lib.system.links.ihk.title}
+		}
+	}
+
+	commendit = IMAGE
+	commendit {
+		file = {$lib.website.path.siteRoot}/{$lib.system.links.commendit.file}
+		altText = {$lib.system.links.commendit.alt}
+		stdWrap.typolink {
+			parameter = {$lib.system.links.commendit.url}
+			extTarget = _blank
+			title = {$lib.system.links.commendit.title}
+		}
+	}
+
+}
+

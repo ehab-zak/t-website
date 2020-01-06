@@ -1,0 +1,26 @@
+// defining grid layout for accordeon entry
+tx_gridelements.setup {
+
+	websitesAccordeonContainer {
+		title = LLL:EXT:websites/Resources/Private/Language/locallang.xlf:gridlayouts_accordeoncontainer_title
+		description = LLL:EXT:websites/Resources/Private/Language/locallang.xlf:gridlayouts_accordeoncontainer_description
+		config {
+			colCount = 1
+			rowCount = 1
+			rows {
+				1 {
+					columns {
+						1 {
+							name = LLL:EXT:websites/Resources/Private/Language/locallang.xlf:layouts_column_content
+							colPos = 101
+							allowed = shortcut,gridelements_pi1
+							allowedGridTypes = websitesAccordeonEntry
+						}
+					}
+				}
+			}
+		}
+		icon = EXT:websites/Resources/Public/Icons/GridLayouts/accordeon-container.gif
+	}
+
+}

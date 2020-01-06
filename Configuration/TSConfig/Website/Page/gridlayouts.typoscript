@@ -1,0 +1,15 @@
+// defining grid elements
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/TSConfig/Website/GridLayouts/gridlayout-background.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/TSConfig/Website/GridLayouts/gridlayout-accordeon-container.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/TSConfig/Website/GridLayouts/gridlayout-accordeon-entry.typoscript">
+
+// additional grid elements for root page
+[page|pid = 0]
+#	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/TSConfig/Website/GridLayouts/gridlayout-skills.typoscript">
+	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/TSConfig/Website/GridLayouts/gridlayout-testimonials.typoscript">
+#	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/TSConfig/Website/GridLayouts/gridlayout-newsslider.typoscript">
+	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/TSConfig/Website/GridLayouts/gridlayout-contactpersons.typoscript">
+	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/TSConfig/Website/GridLayouts/gridlayout-contentbox.typoscript">
+	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/TSConfig/Website/GridLayouts/gridlayout-teaserslider.typoscript">
+[global]
+

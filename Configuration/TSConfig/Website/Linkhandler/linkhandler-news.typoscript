@@ -1,0 +1,11 @@
+// Page TSconfig for registering the linkhandler for "news" records
+TCEMAIN.linkHandler.tx_news {
+	handler = Cobweb\Linkhandler\RecordLinkHandler
+	label = LLL:EXT:websites/Resources/Private/Language/locallang.xlf:linkhandler_tab_news
+	configuration {
+		table = tx_news_domain_model_news
+		storagePid = 63
+		hidePageTree = 1
+	}
+	scanBefore = page
+}

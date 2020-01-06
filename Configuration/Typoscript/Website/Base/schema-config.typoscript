@@ -1,0 +1,32 @@
+plugin.tx_schemaorg {
+    settings {
+        page {
+            # context is not required
+            # Find other types on:
+            # http://schema.org/LocalBusiness
+            type = ProfessionalService
+            name = SEKAS GmbH
+            url = http://www.sekas.de
+            telephone = +49 (89) 74 81 34 - 0
+            image {
+                type = ImageObject
+                url = Images/Layout/Kontakt_MG_3981.jpg
+                caption = SEKAS GmbH
+            }
+            address {
+                type = PostalAddress
+                streetAddress = Baierbrunner Straße 23
+                addressLocality = München
+                postalCode = D-81379
+            }
+            # Contact
+            contactPoint {
+                type = ContactPoint
+                telephone = +49 (89) 74 81 34 - 0
+                # contact types for phone numbers:
+                # https://developers.google.com/search/docs/data-types/corporate-contacts
+                contactType = customer service
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+	  xmlns:f="http://xsd.helmut-hummel.de/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+
+<f:form pageUid="{settings.resultPage}" extensionName="indexedsearch" pluginName="pi2" controller="Search" action="search" method="post" id="searchform" noCacheHash="true">
+	<f:form.textfield name="search[sword]" id="textfield" value="{sword}" placeholder="{settings.placeholder}" class="form ac_input sword" />
+	<f:form.hidden name="search[_sections]" value="0" />
+	<f:form.hidden name="search[_freeIndexUid]" id="tx_indexedsearch_freeIndexUid" value="_" />
+	<f:form.hidden name="search[pointer]" value="0" />
+	<f:form.hidden name="search[ext]" value="" />
+	<f:form.hidden name="search[searchType]" value="1" />
+	<f:form.hidden name="search[defaultOperand]" value="0" />
+	<f:form.hidden name="search[mediaType]" value="-1" />
+	<f:form.hidden name="search[sortOrder]" value="rank_flag" />
+	<f:form.hidden name="search[group]" value="" />
+	<f:form.hidden name="search[languageUid]" value="{f:cObject(typoscriptObjectPath:'lib.lang.uid')}" />
+	<f:form.hidden name="search[desc]" value="" />
+	<f:form.hidden name="search[numberOfResults]" value="10" />
+	<f:form.hidden name="search[extendedSearch]" value="" />
+</f:form>
+
+</html>

@@ -1,0 +1,7 @@
+lib.navi.language = COA
+lib.navi.language {
+	wrap = <ul>|</ul>
+
+	30 < lib.navi.langitemsshort
+}
+

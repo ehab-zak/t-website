@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='utf-8'?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2014-08-18T17:05:00Z" product-name="websites" target-language="de">
+        <header/>
+        <body>
+            <trans-unit id="yes" approved="yes">
+                <source>yes</source>
+                <target state="translated">ja</target></trans-unit>
+            <trans-unit id="no" approved="yes">
+                <source>no</source>
+                <target state="translated">nein</target></trans-unit>
+            <trans-unit id="contact_name" approved="yes">
+                <source>Contact form</source>
+                <target state="translated">Kontaktformular</target></trans-unit>
+
+	     <trans-unit id="privacy_policies1" approved="yes">
+                <source>I acknowledge that I have read, understood and accepted the information about the handling of personal data (</source>
+                <target state="translated">Die Informationen zum Umgang mit personenbezogenen Daten in der</target></trans-unit>
+	     <trans-unit id="privacy_policies2" approved="yes">
+                <source>privacy policies</source>
+                <target state="translated">Datenschutzerklärung</target></trans-unit>
+	     <trans-unit id="privacy_policies3" approved="yes">
+                <source>)</source>
+                <target state="translated"> habe ich gelesen</target></trans-unit>
+
+
+            <trans-unit id="name_placeholder" approved="yes">
+                <source>Your name:</source>
+                <target state="translated">Ihr Name:</target></trans-unit>
+            <trans-unit id="email_placeholder" approved="yes">
+                <source>Your email address:</source>
+                <target state="translated">Ihre E-Mail-Adresse:</target></trans-unit>
+            <trans-unit id="phone_placeholder" approved="yes">
+                <source>Your phone number (optional):</source>
+                <target state="translated">Ihre Telefonnummer (optional):</target></trans-unit>
+            <trans-unit id="subject_placeholder" approved="yes">
+                <source>Subject:</source>
+                <target state="translated">Betreff:</target></trans-unit>
+            <trans-unit id="message_placeholder" approved="yes">
+                <source>Your message:</source>
+                <target state="translated">Ihre Nachricht:</target></trans-unit>
+            <trans-unit id="newsletter_label" approved="yes">
+                <source>Please register me for your newsletter.</source>
+                <target state="translated">Bitte senden Sie mir auch Ihren Newsletter zu.</target></trans-unit>
+            <trans-unit id="submit" approved="yes">
+                <source>Submit</source>
+                <target state="translated">Absenden</target></trans-unit>
+
+            <trans-unit id="error_name_required" approved="yes">
+                <source>Please enter your name!</source>
+                <target state="translated">Bitte geben Sie Ihren Namen ein!</target></trans-unit>
+            <trans-unit id="error_email_required" approved="yes">
+                <source>Please enter your email adress!</source>
+                <target state="translated">Bitte geben Sie Ihre E-Mail-Adresse ein!</target></trans-unit>
+            <trans-unit id="error_email_email" approved="yes">
+                <source>Please enter a valid email adress!</source>
+                <target state="translated">Bitte geben Sie eine gültige E-Mail-Adresse ein!</target></trans-unit>
+            <trans-unit id="error_email_emailExists" approved="yes">
+                <source>Please enter an email adress with valid domain!</source>
+                <target state="translated">Bitte geben Sie eine E-Mail-Adresse mit gültiger Domain ein!</target></trans-unit>
+            <trans-unit id="error_phone_required" approved="yes">
+                <source>Please enter your phone number!</source>
+                <target state="translated">Bitte geben Sie Ihre Telefonnummer ein!</target></trans-unit>
+            <trans-unit id="error_subject_required" approved="yes">
+                <source>Please enter the subject!</source>
+                <target state="translated">Bitte geben Sie den Betreff ein!</target></trans-unit>
+            <trans-unit id="error_message_required" approved="yes">
+                <source>Please enter your message!</source>
+                <target state="translated">Bitte geben Sie Ihre Nachricht ein!</target></trans-unit>
+            <trans-unit id="error_url_maxLength" approved="yes">
+                <source>Input not valid!</source>
+                <target state="translated">Ungültige Eingabe!</target></trans-unit>
+
+            <trans-unit id="mail_salutation" approved="yes">
+                <source>A new contact request from the website has been received</source>
+                <target state="translated">Eine neue Kontaktanfrage von der Website ist eingegangen</target></trans-unit>
+            <trans-unit id="mail_name" approved="yes">
+                <source>Name</source>
+                <target state="translated">Name</target></trans-unit>
+            <trans-unit id="mail_email" approved="yes">
+                <source>Email adress</source>
+                <target state="translated">E-Mail Adresse</target></trans-unit>
+            <trans-unit id="mail_phone" approved="yes">
+                <source>Phone number</source>
+                <target state="translated">Telefonnummer</target></trans-unit>
+            <trans-unit id="mail_subject" approved="yes">
+                <source>Subject</source>
+                <target state="translated">Betreff</target></trans-unit>
+            <trans-unit id="mail_message" approved="yes">
+                <source>Message</source>
+                <target state="translated">Nachricht</target></trans-unit>
+            <trans-unit id="mail_newsletter" approved="yes">
+                <source>Newsletter</source>
+                <target state="translated">Newsletter</target></trans-unit>
+        </body>
+    </file>
+</xliff>

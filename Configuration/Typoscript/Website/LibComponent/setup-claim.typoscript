@@ -1,0 +1,15 @@
+### claim
+lib.component.claim = IMAGE
+lib.component.claim {
+  file = {$lib.website.path.siteRoot}/{$lib.system.claim.file}
+  altText = {$lib.system.claim.altText}
+  stdWrap.typolink.parameter = {$lib.website.pages.websiteRoot}
+}
+
+### claim
+lib.component.claim_without_subline = IMAGE
+lib.component.claim_without_subline {
+  file = {$lib.website.path.siteRoot}/{$lib.system.claim.file_without_claim}
+  altText = {$lib.system.claim.altText}
+  stdWrap.typolink.parameter = {$lib.website.pages.websiteRoot}
+}

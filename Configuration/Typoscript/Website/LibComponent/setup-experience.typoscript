@@ -1,0 +1,30 @@
+### experience
+lib.component.experience {
+
+	typo3 = IMAGE
+	typo3 {
+		file = {$lib.website.path.siteRoot}/{$lib.system.experience.typo3.file}
+		altText = {$lib.system.experience.typo3.alt}
+		stdWrap.typolink {
+			parameter = {$lib.system.experience.typo3.url}
+			title = {$lib.system.experience.typo3.title}
+		}
+	}
+
+	studio9 = IMAGE
+	studio9 {
+		file = {$lib.website.path.siteRoot}/{$lib.system.experience.studio9.file}
+		altText = {$lib.system.experience.studio9.alt}
+		stdWrap.typolink {
+			parameter = {$lib.system.experience.studio9.url}
+			title = {$lib.system.experience.studio9.title}
+		}
+	}
+
+	signet_imageclip = IMAGE
+	signet_imageclip {
+		file = {$lib.website.path.siteRoot}/{$lib.system.experience.signet_imageclip.file}
+		altText = {$lib.system.experience.signet_imageclip.alt}
+	}
+}
+

@@ -1,0 +1,185 @@
+lib.system {
+	company {
+		name = SEKAS GmbH
+		address = Baierbrunner Straße 23
+		zip = D-81379
+		location = München
+		location.en = Munich
+#		country = Deutschland
+#		country.en = Germany
+		phone = +49 (89) 74 81 34 - 0
+		phoneUrl = +49897481340
+		fax = +49 (89) 74 81 34 - 99
+		mail = info@sekas.de
+		domain = www.sekas.de
+		url = http://www.sekas.de
+		image = Images/Layout/Kontakt_MG_3981.jpg
+	}
+
+	claim {
+		file = Images/Layout/sekas-logo_final.svg
+		file_without_claim = Images/Layout/sekas-logo_ohne_claim_final.svg
+		altText = SEKAS Logo
+	}
+
+	socialmedia {
+		xing {
+			file = Images/SocialMedia/Xing.png
+			alt = Logo Xing
+			url = https://www.xing.com/companies/sekasgmbh
+			title = xing
+		}
+		linkedin {
+			file = Images/SocialMedia/LinkedIn.png
+			alt = Logo LinkedIn
+			url = https://www.linkedin.com/company/sekas-gmbh
+			title = LinkedIn
+		}
+		facebook {
+			file = Images/SocialMedia/Facebook.png
+			alt = Logo Facebook
+			url = https://www.facebook.com/SEKASGmbH
+			title = Facebook
+		}
+		googleplus {
+			file = Images/SocialMedia/GooglePlus.png
+			alt = Logo Google+
+			url = https://plus.google.com/+SekasDe/
+			title = Google+
+		}
+	}
+	
+	customer {
+		rohde {
+			file = Images/Customer/rohde_schwarz.png
+			alt = Logo Rohde Schwarz
+			url = https://www.rohde-schwarz.com
+			title = Rohde Schwarz
+		}
+		bosch {
+			file = Images/Customer/bosch.png
+			alt = Logo Bosch
+			url = http://www.bosch.de
+			title = Bosch
+		}
+		indra {
+			file = Images/Customer/indra.png
+			alt = Logo Indra
+			url = www.indracompany.com
+			title = Indra
+		}
+		ruag {
+			file = Images/Customer/ruag.png
+			alt = Logo RUAG
+			url = http://www.ruag.com
+			title = RUAG
+		}
+		pmg {
+			file = Images/Customer/pmg.png
+			alt = Logo PMG
+			url = http://www.pmgnet.de
+			title = PMG
+		}
+		leonardo {
+			file = Images/Customer/leonardo.png
+			alt = Logo Leonardo
+			url = www.leonardocompany.com
+			title = Leonardo
+		}
+		lyomark{
+			file = Images/Customer/lyomark.png
+			alt = Logo Lyomark Pharma
+			url = http://www.lyomark.de
+			title = Lyomark Pharma
+		}
+		bendalis {
+			file = Images/Customer/bendalis.png
+			alt = Logo Bendalis
+			url = http://www.bendalis.com
+			title = Bendalis
+		}
+		lehmann {
+			file = Images/Customer/lehmann.png
+			alt = Logo Lehmann
+			url = www.lehmann-locks.com
+			title = Lehmann
+		}
+		maiss {
+			file = Images/Customer/maiss.png
+			alt = Logo Maiss
+			url = http://www.maiss.de
+			title = Maiss
+		}
+	}
+	
+	certificate {
+		go_digital {
+			file = Images/Certificate/go_digital.jpg
+			alt = Logo go-digital
+			url =  https://www.innovation-beratung-foerderung.de/INNO/Navigation/DE/go-digital/go-digital.html _blank
+			title = go-digital: Den Mittelstand auf dem Weg in die digitale Zukunft begleiten
+
+		}
+		allianz_cybersicherheit {
+			file = Images/Certificate/Logo_Allianz_fuer_Cyber_Sicherheit_Teilnehmer.jpg
+			alt = Webpräsenz der Allianz für Cyber-Sicherheit
+			url =  https://www.bsi.bund.de/DE/Themen/Cyber-Sicherheit/Aktivitaeten/Allianz_fuer_Cybersicherheit/acs_node.html _blank
+			title = Verweis zur Webpräsenz der Allianz für Cyber-Sicherheit
+
+		}
+		commendit {
+			file = Images/Certificate/commendIT-logo-pos.png
+			alt = Logo commendIT
+			url =  https://commendit.de/ _blank
+			title = commendIT
+
+		}
+        vku {
+			file = Images/Certificate/VKU-Foerderverein.png
+			alt = Logo VKU Förderverein
+			url = https://www.vku.de/verband/struktur/vku-foerderverein/ _blank
+			title = VKU Förderverein
+
+		}
+        bayme {
+			file = Images/Certificate/bayme_logo.jpg
+			alt = Logo Bayerischer Unternehmensverband Metall und Elektro e.V.
+			url = https://www.baymevbm.de _blank
+			title = Bayerischer Unternehmensverband Metall und Elektro e.V.
+
+		}
+
+	}
+
+	map {
+		center {
+			longitude = 11.542229
+			latitude = 48.098230
+		}
+		zoom = 13
+		marker {
+			longitude = 11.533095
+			latitude = 48.097904
+		}
+		url = https://www.google.de/maps/place/SEKAS+GmbH/@48.0979051,11.5324447,18z/data=!3m1!4b1!4m5!3m4!1s0x479dded54f221a53:0x5ce31480a98216bc!8m2!3d48.0979043!4d11.5330972
+	}
+
+	labels {
+		searchbox {
+			placeholder = SUCHBEGRIFF EINGEBEN
+		}
+	}
+}
+[globalVar = GP:L = 1]
+lib.system.company.address = Baierbrunner Str. 23
+[global]
+
+[globalVar = GP:L = 1]
+	lib.system {
+		labels {
+			searchbox {
+				placeholder = ENTER SEARCH TERM
+			}
+		}
+	}
+[global]

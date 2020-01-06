@@ -1,0 +1,8 @@
+lib.navi.service = COA
+lib.navi.service {
+  wrap = <ul>|</ul>
+
+  10 < lib.navi.rootitem
+  20 < lib.navi.serviceitems
+  30 < lib.navi.langitemslong
+}

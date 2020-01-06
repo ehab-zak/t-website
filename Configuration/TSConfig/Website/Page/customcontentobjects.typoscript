@@ -1,0 +1,14 @@
+// defining custom conten objects
+
+mod.wizards.newContentElement.wizardItems {
+	extra {
+		header = LLL:EXT:websites/Resources/Private/Language/locallang.xlf:customcontentobjects_header
+	}
+}
+
+#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/TSConfig/Website/ContentObjects/linkbutton.typoscript">
+#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/TSConfig/Website/ContentObjects/skill.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/TSConfig/Website/ContentObjects/image.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/TSConfig/Website/ContentObjects/testimonial.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/TSConfig/Website/ContentObjects/contactperson.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/TSConfig/Website/ContentObjects/teaser.typoscript">

@@ -1,0 +1,40 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+	  xmlns:f="http://xsd.helmut-hummel.de/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<div class="tx-indexedsearch-searchbox">
+	<f:form pageUid="{settings.resultPage}" action="search" method="post" id="tx_indexedsearch" noCacheHash="true" class="mailform">
+		<div class="tx-indexedsearch-hidden-fields">
+			<f:form.hidden name="search[_sections]" value="0" />
+			<f:form.hidden name="search[_freeIndexUid]" id="tx_indexedsearch_freeIndexUid" value="_" />
+			<f:form.hidden name="search[pointer]" id="tx_indexedsearch_pointer" value="0" />
+			<f:form.hidden name="search[ext]" value="{searchParams.ext}" />
+			<f:form.hidden name="search[searchType]" value="{searchParams.searchType}" />
+			<f:form.hidden name="search[defaultOperand]" value="{searchParams.defaultOperand}" />
+			<f:form.hidden name="search[mediaType]" value="{searchParams.mediaType}" />
+			<f:form.hidden name="search[sortOrder]" value="{searchParams.sortOrder}" />
+			<f:form.hidden name="search[group]" value="{searchParams.group}" />
+			<f:form.hidden name="search[languageUid]" value="{searchParams.languageUid}" />
+			<f:form.hidden name="search[desc]" value="{searchParams.desc}" />
+			<f:form.hidden name="search[numberOfResults]" value="{searchParams.numberOfResults}" />
+			<f:form.hidden name="search[extendedSearch]" value="{searchParams.extendedSearch}" />
+		</div>
+		<fieldset>
+			<legend><f:translate key="form.legend" /></legend>
+
+			<div class="form-group sword">
+				<div class="form-field width-100">
+					<label for="tx-indexedsearch-searchbox-sword" class="form-label"><f:translate key="form.searchFor" />:</label>
+					<f:form.textfield name="search[sword]" value="{sword}" placeholder="{f:translate(key: 'form.searchFor')}" id="tx-indexedsearch-searchbox-sword" class="form-control tx-indexedsearch-searchbox-sword" />
+				</div>
+			</div>
+
+			<div class="form-group submit">
+				<div class="form-field">
+					<f:form.submit name="search[submitButton]" value="{f:translate(key: 'form.submit')}" id="tx-indexedsearch-searchbox-button-submit" class="tx-indexedsearch-searchbox-button linkbutton" />
+				</div>
+			</div>
+		</fieldset>
+	</f:form>
+</div>
+
+</html>

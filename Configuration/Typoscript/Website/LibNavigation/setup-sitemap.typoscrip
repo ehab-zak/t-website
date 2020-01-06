@@ -1,0 +1,49 @@
+lib.navi.sitemap = HMENU
+lib.navi.sitemap {
+	protectLvar = all
+	special = directory
+	special.value = {$lib.website.menuRoot.sitemap}
+
+	1 = TMENU
+	1 {
+		noBlur = 1
+		expAll = 1
+		wrap = <ul class="center-section" role="menu">|</ul>
+
+		NO = 1
+		NO {
+			stdWrap.htmlSpecialChars = 1
+			linkWrap = <h5>|</h5>
+			wrapItemAndSub = <li class="main first">|</li>|*|<li class="main middle">|</li>|*|<li class="main last">|</li>
+			doNotLinkIt = 1
+		}
+
+		ACT = 1
+		ACT < .NO
+		ACT {
+			wrapItemAndSub = <li class="main act first">|</li>|*|<li class="main act middle">|</li>|*|<li class="main act last">|</li>
+		}
+	}
+
+	2 = TMENU
+	2 {
+		noBlur = 1
+		expAll = 1
+		wrap = <ul role="menu">|</ul>
+
+		NO = 1
+		NO {
+			stdWrap.htmlSpecialChars = 1
+			linkWrap = <h6>|</h6>
+			wrapItemAndSub = <li class="main first">|</li>|*|<li class="main middle">|</li>|*|<li class="main last">|</li>
+		}
+
+		ACT = 1
+		ACT < .NO
+		ACT {
+			wrapItemAndSub = <li class="main act first">|</li>|*|<li class="main act middle">|</li>|*|<li class="main act last">|</li>
+		}
+	}
+
+}
+

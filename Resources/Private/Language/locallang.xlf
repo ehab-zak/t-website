@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2014-08-18T17:00:00Z" product-name="websites">
+        <header/>
+        <body>
+            <trans-unit id="mod_viewpage_desktop">
+                <source>Desktop</source>
+            </trans-unit>
+            <trans-unit id="mod_viewpage_widescreen">
+                <source>Widescreen / HD</source>
+            </trans-unit>
+
+            <trans-unit id="backendlayouts_storage_title">
+                <source>Storage folder</source>
+            </trans-unit>
+            <trans-unit id="backendlayouts_storage_description">
+                <source>Sysfolder to store records</source>
+            </trans-unit>
+            <trans-unit id="backendlayouts_storageimageslider_title">
+                <source>Image slider storage folder</source>
+            </trans-unit>
+            <trans-unit id="backendlayouts_storageimageslider_description">
+                <source>Sysfolder to store records for image slider</source>
+            </trans-unit>
+            <trans-unit id="backendlayouts_default_title">
+                <source>Sub page default</source>
+            </trans-unit>
+            <trans-unit id="backendlayouts_default_description">
+                <source>Template for default sub page</source>
+            </trans-unit>
+            <trans-unit id="backendlayouts_root_title">
+                <source>Root page</source>
+            </trans-unit>
+            <trans-unit id="backendlayouts_root_description">
+                <source>Template for root page</source>
+            </trans-unit>
+            <trans-unit id="backendlayouts_contact_title">
+                <source>Sub page contact</source>
+            </trans-unit>
+            <trans-unit id="backendlayouts_contact_description">
+                <source>Template for contact sub page</source>
+            </trans-unit>
+            <trans-unit id="backendlayouts_detailplugin_title">
+                <source>Sub page with detail plugin</source>
+            </trans-unit>
+            <trans-unit id="backendlayouts_detailplugin_description">
+                <source>Template for sub page containing detail plugin. Has no header image and H1 is rendered by plugin.</source>
+            </trans-unit>
+            <trans-unit id="backendlayouts_noimage_title">
+                <source>Sub page without header image</source>
+            </trans-unit>
+            <trans-unit id="backendlayouts_noimage_description">
+                <source>Template for sub page without header image</source>
+            </trans-unit>
+            <trans-unit id="backendlayouts_glossary_title">
+                <source>Sub page for glossary</source>
+            </trans-unit>
+            <trans-unit id="backendlayouts_glossary_description">
+                <source>Template for sub page including paganation menu of pages</source>
+            </trans-unit>
+
+
+            <trans-unit id="gridlayouts_background_title">
+                <source>Container with Background Color</source>
+            </trans-unit>
+            <trans-unit id="gridlayouts_background_description">
+                <source>Container with Background Color</source>
+            </trans-unit>
+            <trans-unit id="gridlayouts_accordeoncontainer_title">
+                <source>Accordeon container</source>
+            </trans-unit>
+            <trans-unit id="gridlayouts_accordeoncontainer_description">
+                <source>Container for accordeon entries</source>
+            </trans-unit>
+            <trans-unit id="gridlayouts_accordeonentry_title">
+                <source>Accordeon entry</source>
+            </trans-unit>
+            <trans-unit id="gridlayouts_accordeonentry_description">
+                <source>Single accordeon entry</source>
+            </trans-unit>
+            <trans-unit id="gridlayouts_skills_title">
+                <source>Skills</source>
+            </trans-unit>
+            <trans-unit id="gridlayouts_skills_description">
+                <source>Block showing main skills</source>
+            </trans-unit>
+            <trans-unit id="gridlayouts_testimonials_title">
+                <source>Testimonials</source>
+            </trans-unit>
+            <trans-unit id="gridlayouts_testimonials_description">
+                <source>Block showing testimonials</source>
+            </trans-unit>
+            <trans-unit id="gridlayouts_newsslider_title">
+                <source>News slider</source>
+            </trans-unit>
+            <trans-unit id="gridlayouts_newsslider_description">
+                <source>Block showing slider with latest news</source>
+            </trans-unit>
+            <trans-unit id="gridlayouts_contactpersons_title">
+                <source>Contact persons</source>
+            </trans-unit>
+            <trans-unit id="gridlayouts_contactpersons_description">
+                <source>Block showing most important contact persons</source>
+            </trans-unit>
+            <trans-unit id="gridlayouts_contentbox_title">
+                <source>Content box</source>
+            </trans-unit>
+            <trans-unit id="gridlayouts_contentbox_description">
+                <source>Box for content on root page</source>
+            </trans-unit>
+            <trans-unit id="gridlayouts_teaserslider_title">
+                <source>Teaser slider</source>
+            </trans-unit>
+            <trans-unit id="gridlayouts_teaserslider_description">
+                <source>Block showing slider with teasers</source>
+            </trans-unit>
+
+            <trans-unit id="layouts_column_content">
+                <source>Content</source>
+            </trans-unit>
+            <trans-unit id="layouts_column_headerimage">
+                <source>Headerimage</source>
+            </trans-unit>
+            <trans-unit id="layouts_column_headline">
+                <source>Headline</source>
+            </trans-unit>
+            <trans-unit id="layouts_column_clip">
+                <source>Video clip</source>
+            </trans-unit>
+            <trans-unit id="layouts_column_image">
+                <source>Image</source>
+            </trans-unit>
+            <trans-unit id="layouts_column_skill">
+                <source>Skill</source>
+            </trans-unit>
+            <trans-unit id="layouts_column_button">
+                <source>Link button</source>
+            </trans-unit>
+            <trans-unit id="layouts_column_button">
+                <source>Link button</source>
+            </trans-unit>
+            <trans-unit id="layouts_column_introtext">
+                <source>Intro text</source>
+            </trans-unit>
+            <trans-unit id="layouts_column_person">
+                <source>Person</source>
+            </trans-unit>
+
+            <trans-unit id="customcontentobjects_header">
+                <source>Custom Elements</source>
+            </trans-unit>
+            <trans-unit id="customcontentobjects_linkbutton_title">
+                <source>Link button</source>
+            </trans-unit>
+            <trans-unit id="customcontentobjects_linkbutton_description">
+                <source>Insert button and define link target</source>
+            </trans-unit>
+            <trans-unit id="customcontentobjects_linkbutton_layout_default">
+                <source>red (Default)</source>
+            </trans-unit>
+            <trans-unit id="customcontentobjects_linkbutton_layout_white">
+                <source>white</source>
+            </trans-unit>
+            <trans-unit id="customcontentobjects_skill_title">
+                <source>Skill</source>
+            </trans-unit>
+            <trans-unit id="customcontentobjects_skill_description">
+                <source>Single skill entry</source>
+            </trans-unit>
+            <trans-unit id="customcontentobjects_image_title">
+                <source>Image</source>
+            </trans-unit>
+            <trans-unit id="customcontentobjects_image_description">
+                <source>Simple image</source>
+            </trans-unit>
+            <trans-unit id="customcontentobjects_testimonial_title">
+                <source>Testimonial</source>
+            </trans-unit>
+            <trans-unit id="customcontentobjects_testimonial_description">
+                <source>Customer testimonial for root page</source>
+            </trans-unit>
+            <trans-unit id="customcontentobjects_contactperson_title">
+                <source>Contact person</source>
+            </trans-unit>
+            <trans-unit id="customcontentobjects_contactperson_description">
+                <source>Single contact person entry for root page</source>
+            </trans-unit>
+            <trans-unit id="customcontentobjects_teaser_title">
+                <source>Teaser</source>
+            </trans-unit>
+            <trans-unit id="customcontentobjects_teaser_description">
+                <source>Teaser for slider</source>
+            </trans-unit>
+
+            <trans-unit id="table_pages_subtitle_label">
+                <source>Different title for H1 headline</source>
+            </trans-unit>
+            <trans-unit id="table_news_teaser_label">
+                <source>Subline for single view</source>
+            </trans-unit>
+            <trans-unit id="table_ttcontent_headerlayout_default">
+                <source>Default (H2)</source>
+            </trans-unit>
+            <trans-unit id="table_ttcontent_headerlayout_layout3">
+                <source>Small (H3)</source>
+            </trans-unit>
+            <trans-unit id="table_ttcontent_contactperson_header">
+                <source>Name</source>
+            </trans-unit>
+            <trans-unit id="table_ttcontent_contactperson_subheader">
+                <source>Position</source>
+            </trans-unit>
+            <trans-unit id="table_ttcontent_contactperson_bodytext">
+                <source>Contact data</source>
+            </trans-unit>
+            <trans-unit id="table_ttcontent_textmedia_layout_expert">
+                <source>Expert</source>
+            </trans-unit>
+            <trans-unit id="table_ttcontent_gridelements_pi1_layout_background">
+                <source>Background</source>
+            </trans-unit>
+            <trans-unit id="table_ttcontent_textmedia_layout_background">
+                <source>Box with grey background</source>
+            </trans-unit>
+
+            <trans-unit id="rte_fontweight_regular">
+                <source>font weight: regular</source>
+            </trans-unit>
+            <trans-unit id="rte_textcolor_default">
+                <source>default</source>
+            </trans-unit>
+            <trans-unit id="rte_textcolor_ci-main">
+                <source>CI main color</source>
+            </trans-unit>
+            <trans-unit id="rte_link_more">
+                <source>more</source>
+            </trans-unit>
+            <trans-unit id="rte_classes_h3folder">
+                <source>Headline H3 - icon *Folder*</source>
+            </trans-unit>
+            <trans-unit id="rte_classes_h3info">
+                <source>Headline H3 - icon *Info*</source>
+            </trans-unit>
+            <trans-unit id="rte_classes_h3toolbox">
+                <source>Headline H3 - icon *Toolbox*</source>
+            </trans-unit>
+            <trans-unit id="rte_classes_h3gear">
+                <source>Headline H3 - icon *Gear*</source>
+            </trans-unit>
+
+
+
+
+            <trans-unit id="textlabel_navigation">
+                <source>Navigation</source>
+            </trans-unit>
+            <trans-unit id="textlabel_contact">
+                <source>Contact</source>
+            </trans-unit>
+            <trans-unit id="textlabel_phone">
+                <source>Phone</source>
+            </trans-unit>
+            <trans-unit id="textlabel_fax">
+                <source>Fax</source>
+            </trans-unit>
+            <trans-unit id="textlabel_email">
+                <source>Email</source>
+            </trans-unit>
+            <trans-unit id="textlabel_sitemap">
+                <source>Sitemap</source>
+            </trans-unit>
+            <trans-unit id="textlabel_phone_short">
+                <source>Phone</source>
+            </trans-unit>
+            <trans-unit id="textlabel_totop">
+                <source>to top</source>
+            </trans-unit>
+            <trans-unit id="textlabel_worksample">
+                <source>Work sample</source>
+            </trans-unit>
+			
+            <trans-unit id="headline_customer">
+                <source>SEKAS effects highest performance:</source>
+            </trans-unit>
+
+            <trans-unit id="news_templatelayout_list">
+                <source>List</source>
+            </trans-unit>
+            <trans-unit id="news_templatelayout_detaillatest">
+                <source>Detail:latest section</source>
+            </trans-unit>
+            <trans-unit id="news_templatelayout_detailsingle">
+                <source>Detail:single section</source>
+            </trans-unit>
+            <trans-unit id="news_templatelayout_latest">
+                <source>Latest</source>
+            </trans-unit>
+
+            <trans-unit id="linkhandler_tab_news">
+                <source>News</source>
+            </trans-unit>
+            <trans-unit id="linkhandler_tab_worksamples">
+                <source>Work samples</source>
+            </trans-unit>
+
+        </body>
+    </file>
+</xliff>

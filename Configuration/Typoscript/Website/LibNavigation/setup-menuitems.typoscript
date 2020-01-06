@@ -1,0 +1,212 @@
+lib.navi.rootitem = HMENU
+lib.navi.rootitem {
+  special = list
+  special.value = {$lib.website.pages.websiteRoot}
+
+  1 = TMENU
+  1 {
+    noBlur = 1
+    expAll = 1
+
+    NO = 1
+    NO {
+      wrapItemAndSub = <li class="root first">|</li>
+    }
+
+    CUR = 1
+    CUR < .NO
+    CUR {
+      wrapItemAndSub = <li class="root act first">|</li>
+    }
+  }
+}
+
+lib.navi.serviceitems = HMENU
+lib.navi.serviceitems {
+  protectLvar = all
+  special = directory
+  special.value = {$lib.website.menuRoot.service}
+
+  1 = TMENU
+  1 {
+    noBlur = 1
+    expAll = 1
+
+    NO = 1
+    NO {
+      wrapItemAndSub = <li class="service middle">|</li>|*|<li class="service middle">|</li>|*|<li class="service last">|</li>
+    }
+
+    ACT = 1
+    ACT < .NO
+    ACT {
+      wrapItemAndSub = <li class="service act middle">|</li>|*|<li class="service act middle">|</li>|*|<li class="service act last">|</li>
+    }
+  }
+}
+
+lib.navi.searchitem = HMENU
+lib.navi.searchitem {
+  special = list
+  special.value = {$lib.website.pages.search}
+
+  1 = TMENU
+  1 {
+    noBlur = 1
+    expAll = 1
+
+    NO = 1
+    NO {
+      wrapItemAndSub = <li class="search middle">|</li>
+    }
+
+    CUR = 1
+    CUR < .NO
+    CUR {
+      wrapItemAndSub = <li class="search act middle">|</li>
+    }
+  }
+}
+
+lib.navi.mainitems = HMENU
+lib.navi.mainitems {
+  protectLvar = all
+  entryLevel = 0
+
+  1 = TMENU
+  1 {
+    noBlur = 1
+    expAll = 1
+
+    NO = 1
+    NO {
+      stdWrap.htmlSpecialChars = 1
+      wrapItemAndSub = <li class="main first">|</li>|*|<li class="main middle">|</li>|*|<li class="main middle">|</li>
+    }
+
+    IFSUB = 1
+    IFSUB < .NO
+    IFSUB {
+      wrapItemAndSub = <li class="main first hassub">|</li>|*|<li class="main middle hassub">|</li>|*|<li class="main middle hassub">|</li>
+      ATagParams = class="touchclick"
+    }
+
+    ACT = 1
+    ACT < .NO
+    ACT {
+      wrapItemAndSub = <li class="main act isActive first">|</li>|*|<li class="main act isActive middle">|</li>|*|<li class="main act isActive middle">|</li>
+    }
+
+    ACTIFSUB = 1
+    ACTIFSUB < .ACT
+    ACTIFSUB {
+      wrapItemAndSub = <li class="main act isActive first hassub">|</li>|*|<li class="main act isActive middle hassub">|</li>|*|<li class="main act isActive middle hassub">|</li>
+      ATagParams = class="touchclick"
+    }
+
+    SPC = 1
+    SPC {
+      doNotShowLink = 1
+      wrapItemAndSub = <li class="spacer"><span class="line">|</span></li>
+    }
+  }
+
+  2 < .1
+  2 {
+    wrap = <div class="nav-primary"><div class="nav-primary-wrapper subnav group"><ul class="level-2 group">|</ul></div></div>
+    wrap = <div class="nav-primary"><div class="nav-primary-wrapper subnav group"><ul class="level-2 group">|</ul></div><div class="nav-primary-shadow"></div></div>
+
+    NO {
+      wrapItemAndSub = <li class="first">|</li>|*|<li class="middle">|</li>|*|<li class="last">|</li>
+      linkWrap = <span>|</span>
+    }
+
+    IFSUB {
+      wrapItemAndSub = <li class="first hassub">|</li>|*|<li class="middle hassub">|</li>|*|<li class="last hassub">|</li>
+      linkWrap = <span>|</span>
+    }
+
+    ACT {
+      wrapItemAndSub = <li class="act isActive first">|</li>|*|<li class="act isActive middle">|</li>|*|<li class="act isActive last">|</li>
+      linkWrap = <span>|</span>
+    }
+
+    ACTIFSUB {
+      wrapItemAndSub = <li class="act isActive first hassub">|</li>|*|<li class="act isActive middle hassub">|</li>|*|<li class="act isActive last hassub">|</li>
+      linkWrap = <span>|</span>
+    }
+  }
+
+  3 < .2
+  3 {
+    wrap = <div class="level-3-wrapper"><ul class="level-3 group">|</ul></div>
+  }
+}
+
+lib.navi.footeritems = HMENU
+lib.navi.footeritems {
+  protectLvar = all
+  special = directory
+  special.value = {$lib.website.menuRoot.footer}
+
+  1 = TMENU
+  1 {
+    noBlur = 1
+    expAll = 1
+
+    NO = 1
+    NO {
+      wrapItemAndSub = <li class="service middle">|</li>|*|<li class="service middle">|</li>|*|<li class="service last">|</li>
+    }
+
+    ACT = 1
+    ACT < .NO
+    ACT {
+      wrapItemAndSub = <li class="service act middle">|</li>|*|<li class="service act middle">|</li>|*|<li class="service act last">|</li>
+    }
+  }
+}
+
+lib.navi.langitemsshort = HMENU
+lib.navi.langitemsshort {
+  special = language
+  special.value = 0,1
+
+  includeNotInMenu = 1
+
+  1 = TMENU
+  1 {
+    NO = 1
+    NO {
+      stdWrap.cObject = TEXT
+      stdWrap.cObject {
+        value = DE || EN
+      }
+
+      linkWrap = <li>|</li>
+      linkWrap = <li class="lang first">|</li>|*|<li class="lang middle">|</li>|*|<li class="lang last">|</li>
+    }
+
+    // hide current language
+    ACT = 1
+    ACT < .NO
+    ACT.doNotShowLink = 1
+
+    // hide when not translated
+    USERDEF1 = 1
+    USERDEF1 < .NO
+    USERDEF1.doNotShowLink = 1
+
+  }
+}
+
+lib.navi.langitemslong < lib.navi.langitemsshort
+lib.navi.langitemslong {
+  1 {
+    NO {
+      stdWrap.cObject {
+        value = deutsch || english
+      }
+    }
+  }
+}

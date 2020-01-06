@@ -1,0 +1,57 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+	  xmlns:f="http://xsd.helmut-hummel.de/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+
+<f:layout name="ContentFooter"/>
+
+<f:section name="content">
+	<div class="testimonial">
+		<f:alias map="{customer:gallery.rows.1.columns.1}">
+			<div class="customer">
+				<div class="image">
+					<figure>
+						<f:media
+								file="{customer.media}"
+								alt="{customer.media.alternative}"
+								title="{customer.media.title}"
+								/>
+						<figcaption>
+							<p class="name">{customer.media.title}</p>
+							<p class="position"><f:format.nl2br>{customer.media.description}</f:format.nl2br></p>
+						</figcaption>
+					</figure>
+				</div>
+			</div>
+			<div class="content">
+				<f:if condition="{data.header_link}">
+					<f:then>
+						<h3>
+							<f:link.typolink parameter="{data.header_link}" title="{data.header}" class="link">{data.header}</f:link.typolink>
+						</h3>
+						<div class="message">
+							<f:link.typolink parameter="{data.header_link}" title="{data.header}" class="link">
+								<f:format.html>{data.bodytext}</f:format.html>
+							</f:link.typolink>
+						</div>
+						<p class="author">
+							<f:link.typolink parameter="{data.header_link}" title="{data.header}" class="link">
+								<span class="name">{customer.media.title}</span>
+								<span class="position"><f:format.nl2br>{customer.media.description}</f:format.nl2br></span>
+							</f:link.typolink>
+						</p>
+					</f:then>
+					<f:else>
+						<h3>{data.header}</h3>
+						<div class="message"><f:format.html>{data.bodytext}</f:format.html></div>
+						<p class="author">
+							<span class="name">{customer.media.title}</span>
+							<span class="position"><f:format.nl2br>{customer.media.description}</f:format.nl2br></span>
+						</p>
+					</f:else>
+				</f:if>
+			</div>
+		</f:alias>
+	</div>
+</f:section>
+
+</html>

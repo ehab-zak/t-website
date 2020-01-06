@@ -1,0 +1,161 @@
+// define google map on contact page(s)
+lib.contact.map = TEXT
+lib.contact.map {
+  value = <div id="map" class="contentheader"></div>
+}
+
+[PIDinRootline = {$lib.website.pages.contactFormPage}]
+  page.1010 = COA
+  page.1010 {
+
+        10 = COA
+        10 {
+            wrap (
+<script type="text/javascript">
+    function initMap() {
+        |
+    }
+</script>
+)
+
+            10 = COA
+            10 {
+
+                wrap = var markerContent = '<div id="marker-content">|</div>';
+
+                10 < lib.component.claim_without_subline
+
+                20 = COA
+                20 {
+                    wrap = <p>|</p>
+
+                    10 < lib.contact.company
+
+                    20 < lib.contact.address
+                    20.wrap = <br />|
+
+                    30 < lib.contact.zip
+                    30.wrap = <br />|
+
+                    40 < lib.contact.location
+                    40.noTrimWrap = | ||
+                }
+
+                30 = COA
+                30 {
+                    wrap = <p>|</p>
+
+                    10 = COA
+                    10 {
+                        wrap = |
+
+                        10 = TEXT
+                        10 {
+                            value = Tel.:
+                            noTrimWrap = ||&nbsp;|
+                        }
+
+                        20 < lib.contact.phoneLink
+                    }
+
+                    20 = COA
+                    20 {
+                        wrap = &nbsp;&nbsp;&nbsp;&nbsp;|
+
+                        10 = TEXT
+                        10 {
+                            value = E-Mail:
+                            noTrimWrap = ||&nbsp;|
+                        }
+                        20 = COA
+                        20 {
+                            stdWrap.replacement {
+                                10 {
+                                    search = '
+                                    replace = \'
+                                }
+                            }
+
+                            10 < lib.contact.mailLink
+                        }
+                    }
+                }
+
+                40 = COA
+                40 {
+                    wrap = <p>|</p>
+
+                    10 = TEXT
+                    10 {
+                        value = Größere Karte ansehen
+                        typolink {
+                            parameter = {$lib.system.map.url}
+                            extTarget = _blank
+                        }
+                    }
+                }
+
+
+            }
+
+            20 = TEXT
+            20.value (
+var mapDiv = document.getElementById('map');
+var mobileZoomFaktor = {$lib.system.map.zoom};
+
+/**
+ * calculate zoom faktor from screen width
+ * @returns {int}
+ */
+function getZoomFaktor(){
+  zoomFaktor = mobileZoomFaktor;
+
+  if (window.innerWidth >= 640){
+    zoomFaktor = mobileZoomFaktor + 2;
+  }
+  if (window.innerWidth >= 1024){
+    zoomFaktor = mobileZoomFaktor + 2;
+  }
+  return zoomFaktor;
+}
+
+/**
+ * check for default UI from screen width
+ * @returns {boolean}
+ */
+function getDisableDefaultUI(){
+  disableDefaultUI = true;
+  if (window.innerWidth >= 1024){
+    disableDefaultUI = false;
+  }
+  return disableDefaultUI;
+}
+
+var map = new google.maps.Map(mapDiv, {
+  center: {lat: {$lib.system.map.center.latitude}, lng: {$lib.system.map.center.longitude}},
+  zoom: getZoomFaktor(),
+  disableDefaultUI: getDisableDefaultUI()
+});
+
+var infowindow = new google.maps.InfoWindow({
+  content: markerContent
+});
+
+var marker = new google.maps.Marker({
+  position: {lat: {$lib.system.map.marker.latitude}, lng: {$lib.system.map.marker.longitude}},
+  map: map,
+  title: '{$lib.system.company.name}',
+  icon: 'https://maps.google.com/mapfiles/ms/icons/red-dot.png'
+});
+
+marker.addListener('click', function() {
+  infowindow.open(map, marker);
+});
+
+            )
+        }
+
+    20 = TEXT
+    20.value = <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDScBTz3wxvArsaZHiUlT6_5VkYd8X8No0&callback=initMap" async defer></script>
+  }
+[global]

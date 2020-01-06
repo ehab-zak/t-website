@@ -1,0 +1,80 @@
+lib.website {
+	contact {
+		subject = Kontaktanfrage der Website
+	}
+
+#	url {
+#		### base url
+#		base = http://www.studioneun.de/
+#	}
+
+	menuRoot {
+		service = 14
+		sidebar = 20
+		sitemap = 29
+		footer = 22
+	}
+
+	pages {
+		websiteRoot = 1
+		contactFormPage = 15
+		contactFormConfirmation = 16#page
+		search = 50
+		searchResults = 51
+		news {
+			single = 18
+			list = 17
+		}
+	}
+
+	storage {
+		news = 52
+		rootPageSliderImages = 54
+	}
+
+	path {
+		### favicon - relative path from docroot
+		favicon = EXT:websites/Resources/Public/Icons/Favicons/sekas.ico
+
+		### base root directory for custom files. No trailing "/"!
+		siteRoot = EXT:websites/Resources/Public/Website
+
+		### own script
+		scripts_js = EXT:websites/Resources/Public/Website/JavaScript/scripts.min.js
+		scripts_js_dev = EXT:websites/Resources/Public/Website/JavaScript/scripts.js
+
+		### spam protection
+		spamprotection_js = EXT:websites/Resources/Public/Website/JavaScript/spam-protection.min.js
+		spamprotection_js_dev = EXT:websites/Resources/Public/Website/JavaScript/spam-protection.js
+
+		### jquery
+		jquery_2_2_js = EXT:websites/Resources/Public/Contrib/jquery-2.2.3/jquery-2.2.3.min.js
+		jquery_2_2_js_dev = EXT:websites/Resources/Public/Contrib/jquery-2.2.3/jquery-2.2.3.js
+
+		###flexslider
+		flexslider_2_5_js = EXT:websites/Resources/Public/Website/JavaScript/jquery.flexslider-min.js
+		flexslider_2_5_js_dev = EXT:websites/Resources/Public/Website/JavaScript/jquery.flexslider.js
+
+		###fullPage.js
+		fullpage_2_8_js = EXT:websites/Resources/Public/Contrib/fullPage.js-2.8.1/jquery.fullPage.min.js
+		fullpage_2_8_js_dev = EXT:websites/Resources/Public/Contrib/fullPage.js-2.8.1/jquery.fullPage.js
+
+		###picturefill - we have to include this on our own, therefore absolute paths required
+		picturefill_3_0_js = /typo3conf/ext/websites/Resources/Public/Contrib/picturefill-3.0.2/dist/picturefill.min.js
+		picturefill_3_0_js_dev = /typo3conf/ext/websites/Resources/Public/Contrib/picturefill-3.0.2/dist/picturefill.js
+
+		### fluid
+		templateRootPath = EXT:websites/Resources/Private/Templates/Website/
+		layoutRootPath = EXT:websites/Resources/Private/Layouts/Website/
+		partialRootPath = EXT:websites/Resources/Private/Partials/Website/
+        fluidStyledContentModifiedRoot = EXT:websites/Resources/Private/Extensions/Website/FluidStyledContent/Modified/
+		fluidStyledContentNewRoot = EXT:websites/Resources/Private/Extensions/Website/FluidStyledContent/New/
+        gridelementsRoot = EXT:websites/Resources/Private/Extensions/Website/Gridelements/
+
+	}
+
+	tracking {
+	    googleAnalyticsID = UA-90434855-1
+	}
+
+}

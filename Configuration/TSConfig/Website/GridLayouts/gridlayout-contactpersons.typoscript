@@ -1,0 +1,52 @@
+// defining grid layout for skills section
+tx_gridelements.setup {
+
+	websitesContactpersons {
+		title = LLL:EXT:websites/Resources/Private/Language/locallang.xlf:gridlayouts_contactpersons_title
+		description = LLL:EXT:websites/Resources/Private/Language/locallang.xlf:gridlayouts_contactpersons_description
+		config {
+#			colCount = 4
+			colCount = 2
+			rowCount = 2
+			rows {
+				1 {
+					columns {
+						1 {
+							name = LLL:EXT:websites/Resources/Private/Language/locallang.xlf:layouts_column_introtext
+#							colspan = 4
+							colspan = 2
+							colPos = 111
+							allowed = textmedia
+						}
+					}
+				}
+				2 {
+					columns {
+						1 {
+							name = LLL:EXT:websites/Resources/Private/Language/locallang.xlf:layouts_column_person
+							colPos = 112
+							allowed = contactperson
+						}
+						2 {
+							name = LLL:EXT:websites/Resources/Private/Language/locallang.xlf:layouts_column_person
+							colPos = 113
+							allowed = contactperson
+						}
+#						3 {
+#							name = LLL:EXT:websites/Resources/Private/Language/locallang.xlf:layouts_column_person
+#							colPos = 114
+#							allowed = contactperson
+#						}
+#						4 {
+#							name = LLL:EXT:websites/Resources/Private/Language/locallang.xlf:layouts_column_person
+#							colPos = 115
+#							allowed = contactperson
+#						}
+					}
+				}
+			}
+		}
+		icon = EXT:websites/Resources/Public/Icons/GridLayouts/contactpersons.gif
+	}
+
+}

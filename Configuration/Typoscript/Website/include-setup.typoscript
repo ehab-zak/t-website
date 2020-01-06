@@ -1,0 +1,71 @@
+
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/Typoscript/Website/Base/setup-config.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/Typoscript/Website/Base/setup-language.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/Typoscript/Website/LibContact/setup-contact.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/Typoscript/Website/ExtFormhandler/setup-contactform.typoscript">
+plugin.tx_powermail {
+        view {
+                templateRootPaths {
+                        0 = EXT:powermail/Resources/Private/Templates/
+                        1 = fileadmin/templates/powermail/Templates/
+                }
+                partialRootPaths {
+                        0 = EXT:powermail/Resources/Private/Partials/
+                        1 = fileadmin/templates/powermail/Partials/
+                }
+                layoutRootPaths {
+                        0 = EXT:powermail/Resources/Private/Layouts/
+                        1 = fileadmin/templates/powermail/Layouts/
+                }
+        }
+}
+plugin.tx_powermail.view {
+        templateRootPath = fileadmin/templates/onepager/powermail/Templates/
+        partialRootPath = fileadmin/templates/onepager/powermail/Partials/
+        layoutRootPath = fileadmin/templates/onepager/powermail/Layouts/
+}
+
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/Typoscript/Website/ExtRealurl/setup-realurl.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/Typoscript/Website/ExtIndexedSearch/setup-indexedsearch.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/Typoscript/Website/ExtNews/setup-news.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/Typoscript/Website/ExtSitemap/setup-sitemap.typoscript">
+#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/Typoscript/Website/ExtLinkhandler/setup-linkhandler-news.typoscript">
+
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/Typoscript/Website/LibComponent/setup-claim.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/Typoscript/Website/LibContact/setup-map.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/Typoscript/Website/LibNavigation/setup-menuitems.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/Typoscript/Website/LibNavigation/setup-servicemenu.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/Typoscript/Website/LibNavigation/setup-langmenu.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/Typoscript/Website/LibNavigation/setup-mainmenu.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/Typoscript/Website/LibNavigation/setup-breadcrumb.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/Typoscript/Website/LibNavigation/setup-sidebarmenu.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/Typoscript/Website/LibNavigation/setup-sitemap.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/Typoscript/Website/LibComponent/setup-adaptivepicture.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/Typoscript/Website/LibComponent/setup-imageslider.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/Typoscript/Website/LibComponent/setup-headerimage.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/Typoscript/Website/LibComponent/setup-pagetitle.typoscript">
+#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/Typoscript/Website/LibComponent/setup-links.typoscript">
+
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/Typoscript/Website/LibComponent/setup-socialmedia.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/Typoscript/Website/LibComponent/setup-customer.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/Typoscript/Website/LibComponent/setup-certificate.typoscript">
+#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/Typoscript/Website/LibComponent/setup-experience.typoscript">
+#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/Typoscript/Website/LibComponent/setup-awards.typoscript">
+
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/Typoscript/Website/LibComponent/setup-searchbox.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/Typoscript/Website/LibContent/setup-content.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/Typoscript/Website/LibContent/setup-gridelements.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/Typoscript/Website/LibContent/setup-ctype_linkbutton.typoscript">
+#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/Typoscript/Website/LibContent/setup-ctype_skill.typoscript">
+
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/Typoscript/Website/LibContent/setup-ctype_image.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/Typoscript/Website/LibContent/setup-ctype_testimonial.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/Typoscript/Website/LibContent/setup-ctype_contactperson.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/Typoscript/Website/LibContent/setup-ctype_teaser.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/Typoscript/Website/LibMeta/setup-meta.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/Typoscript/Website/LibTracking/setup-ga.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/Typoscript/Website/Base/setup-template.typoscript">
+[applicationContext = Development,Development*]
+
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:websites/Configuration/Typoscript/Website/include-development.typoscript">
+[global]

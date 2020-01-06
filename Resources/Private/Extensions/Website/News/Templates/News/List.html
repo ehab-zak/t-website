@@ -1,0 +1,90 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+	  xmlns:f="http://xsd.helmut-hummel.de/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:n="http://xsd.helmut-hummel.de/ns/News/ViewHelpers">
+
+{namespace n=GeorgRinger\News\ViewHelpers}
+<f:layout name="General"/>
+<!--
+	=====================
+		Templates/News/List.html
+-->
+
+<f:section name="content">
+	<!--TYPO3SEARCH_end-->
+	<f:if condition="{news}">
+		<f:then>
+			<f:switch expression="{settings.templateLayout}">
+				<f:case value="latest">
+					<f:render section="show_latest_items" arguments="{_all}"/>
+				</f:case>
+				<f:case value="detaillatest">
+					<f:render section="show_detaillatest_items" arguments="{_all}"/>
+				</f:case>
+				<f:case value="detailsingle">
+					<f:render section="show_detailsingle_items" arguments="{_all}"/>
+				</f:case>
+				<f:case value="list">
+					<f:render section="show_list_items" arguments="{_all}"/>
+				</f:case>
+				<f:case default="true">
+					<f:render section="show_list_items" arguments="{_all}"/>
+				</f:case>
+			</f:switch>
+		</f:then>
+		<f:else>
+			<div class="no-news-found">
+				<f:translate key="list_nonewsfound"/>
+			</div>
+		</f:else>
+	</f:if>
+	<!--TYPO3SEARCH_begin-->
+</f:section>
+
+<f:section name="show_latest_items">
+	<div class="news-list-view news-latest" id="news-container-{contentObjectData.uid}">
+		<div id="news-slider">
+			<ul class="slides">
+				<f:for each="{news}" as="newsItem" iteration="iterator">
+					<li>
+						<f:render partial="Latest/Item"
+								  arguments="{newsItem:newsItem,settings:settings,iterator:iterator}"/>
+					</li>
+				</f:for>
+			</ul>
+		</div>
+	</div>
+</f:section>
+
+
+<f:section name="show_detaillatest_items">
+	<div class="news-list-view news-list topborder" id="news-container-{contentObjectData.uid}">
+		<f:for each="{news}" as="newsItem" iteration="iterator">
+			<f:render partial="List/Item" arguments="{newsItem:newsItem,settings:settings,iterator:iterator}"/>
+		</f:for>
+	</div>
+</f:section>
+
+
+<f:section name="show_detailsingle_items">
+	<div class="news news-single" id="news-container-{contentObjectData.uid}">
+		<div class="article" itemscope="itemscope" itemtype="http://schema.org/Article">
+			<f:for each="{news}" as="newsItem" iteration="iterator">
+				<f:render partial="Detail/Item" section="content"
+						  arguments="{newsItem:newsItem,settings:settings,iterator:iterator}"/>
+			</f:for>
+		</div>
+	</div>
+</f:section>
+
+
+<f:section name="show_list_items">
+	<div class="news-list-view news-list" id="news-container-{contentObjectData.uid}">
+		<n:widget.paginate objects="{news}" as="paginatedNews" configuration="{settings.list.paginate}"
+						   initial="{offset:settings.offset,limit:settings.limit,recordId:contentObjectData.uid}">
+			<f:for each="{paginatedNews}" as="newsItem" iteration="iterator">
+				<f:render partial="List/Item" arguments="{newsItem:newsItem,settings:settings,iterator:iterator}"/>
+			</f:for>
+		</n:widget.paginate>
+	</div>
+</f:section>
+

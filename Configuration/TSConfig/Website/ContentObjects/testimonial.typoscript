@@ -1,0 +1,15 @@
+mod.wizards.newContentElement.wizardItems {
+	extra {
+		elements {
+			testimonial {
+				iconIdentifier = tx_websites_ctypes_testimonial
+				title = LLL:EXT:websites/Resources/Private/Language/locallang.xlf:customcontentobjects_testimonial_title
+				description = LLL:EXT:websites/Resources/Private/Language/locallang.xlf:customcontentobjects_testimonial_description
+				tt_content_defValues {
+					CType = testimonial
+				}
+			}
+		}
+		show = *
+	}
+}

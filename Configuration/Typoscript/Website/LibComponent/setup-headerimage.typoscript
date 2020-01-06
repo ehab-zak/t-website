@@ -1,0 +1,12 @@
+lib.component.headerImage < styles.content.get
+lib.component.headerImage {
+
+  select.where = colPos=10
+  slide = -1
+
+  renderObj < lib.component.adaptivePicture
+  renderObj {
+    wrap = <div id="headerimage" class="contentheader">|</div>
+  }
+
+}

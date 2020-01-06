@@ -1,0 +1,11 @@
+plugin.tx_imageclip {
+	view {
+		templateRootPath = EXT:websites/Resources/Private/Extensions/Website/Imageclip/Templates/
+		partialRootPath = EXT:websites/Resources/Private/Extensions/Website/Imageclip/Partials/
+		layoutRootPath = EXT:websites/Resources/Private/Extensions/Website/Imageclip/Layouts/
+	}
+	settings {
+#		cssFile = EXT:imageclip/Resources/Public/Css/imageclip.css
+#		jsFile = EXT:imageclip/Resources/Public/JavaScript/imageclip.js
+	}
+}

@@ -1,0 +1,38 @@
+config {
+  no_cache = 0
+  cache_period = 86400
+  cache_clearAtMidnight = 1
+  sendCacheHeaders = 1
+
+  notification_email_encoding = quoted-printable
+  notification_email_charset = utf-8
+  notification_email_urlmode = all
+
+  absRefPrefix = /
+  intTarget = _self
+  linkVars = UID,L(0-1),debug
+  aTagParams = onFocus="blurLink(this)"
+  typolinkCheckRootline = 1
+  typolinkEnableLinksAcrossDomains = 1
+  simulateStaticDocuments = 0
+
+  defaultGetVars {
+    L = 0
+  }
+
+  doctype = html5
+  xmlprologue = none
+
+  admPanel = 1
+
+  spamProtectEmailAddresses = 2
+  spamProtectEmailAddresses_atSubst = <span class="at"></span>
+
+  inlineStyle2TempFile = 0
+  removeDefaultJS = 1
+  minifyCSS = 1
+  minifyJS = 1
+  concatenateCss = 1
+  concatenateJs = 1
+  moveJsFromHeaderToFooter = 1
+}

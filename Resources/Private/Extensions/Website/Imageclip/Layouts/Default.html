@@ -1,0 +1,12 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+	  xmlns:f="http://xsd.helmut-hummel.de/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+<f:comment>
+	<f:if condition="{settings.cssFile}">
+		<n:includeFile path="{settings.cssFile}" />
+	</f:if>
+</f:comment>
+<div id="imageclip" class="section-item">
+	<f:render section="Main" />
+</div>
+</html>

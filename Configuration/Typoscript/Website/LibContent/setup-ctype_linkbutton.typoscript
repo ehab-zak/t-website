@@ -1,0 +1,16 @@
+// define custom ctype
+tt_content {
+  linkbutton =< lib.fluidContent
+  linkbutton {
+    templateName = LinkButton
+    stdWrap {
+      # Setup the edit icon for content element "html"
+      editIcons = tt_content: header [header_layout], bodytext, header_link
+      editIcons {
+        beforeLastTag = 1
+        iconTitle.data = LLL:EXT:fluid_styled_content/Resources/Private/Language/FrontendEditing.xlf:editIcon.html
+      }
+    }
+  }
+
+}

@@ -1,0 +1,15 @@
+mod.wizards.newContentElement.wizardItems {
+	extra {
+		elements {
+			image {
+				iconIdentifier = tx_websites_ctypes_image
+				title = LLL:EXT:websites/Resources/Private/Language/locallang.xlf:customcontentobjects_image_title
+				description = LLL:EXT:websites/Resources/Private/Language/locallang.xlf:customcontentobjects_image_description
+				tt_content_defValues {
+					CType = image
+				}
+			}
+		}
+		show = *
+	}
+}

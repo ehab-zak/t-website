@@ -1,0 +1,24 @@
+tx_sitemap{
+  
+  pages{
+    nav_hide = 1
+  no_search = 1
+  }
+
+  records.news = 1
+  records.news{
+    table = tx_news_domain_model_news
+    select.pidInList = {$lib.website.storage.news}
+    typolink.parameter = {$lib.website.pages.news.single}
+    typolink.addParams = &tx_news_pi1[controller]=News&tx_news_pi1[action]=detail&tx_news_pi1[news]=
+    }
+
+ records.reference = 1
+ records.reference{
+    table = tx_worksample_domain_model_reference
+    select.pidInList = {$lib.website.pages.worksamples.single}
+    typolink.parameter = {$lib.website.pages.worksamples.single}
+    typolink.addParams = &tx_worksample_worksample[reference]=
+  }
+
+}

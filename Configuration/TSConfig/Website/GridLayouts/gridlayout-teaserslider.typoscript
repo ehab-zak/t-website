@@ -1,0 +1,25 @@
+// defining grid layout for testimonials section
+tx_gridelements.setup {
+
+	websitesTeaserslider {
+		title = LLL:EXT:websites/Resources/Private/Language/locallang.xlf:gridlayouts_teaserslider_title
+		description = LLL:EXT:websites/Resources/Private/Language/locallang.xlf:gridlayouts_teaserslider_description
+		config {
+			colCount = 1
+			rowCount = 1
+			rows {
+				1 {
+					columns {
+						1 {
+							name = LLL:EXT:websites/Resources/Private/Language/locallang.xlf:layouts_column_content
+							colPos = 117
+							allowed = teaser
+						}
+					}
+				}
+			}
+		}
+		icon = EXT:websites/Resources/Public/Icons/GridLayouts/teaserslider.gif
+	}
+
+}

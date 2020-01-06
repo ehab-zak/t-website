@@ -1,0 +1,70 @@
+### socialmedia
+lib.component.socialmedia {
+
+  xing = IMAGE
+  xing {
+    file = {$lib.website.path.siteRoot}/{$lib.system.socialmedia.xing.file}
+    altText = {$lib.system.socialmedia.xing.alt}
+    stdWrap.typolink {
+      parameter = {$lib.system.socialmedia.xing.url}
+      extTarget = _blank
+      title = {$lib.system.socialmedia.xing.title}
+    }
+  }
+
+  linkedin = IMAGE
+  linkedin {
+    file = {$lib.website.path.siteRoot}/{$lib.system.socialmedia.linkedin.file}
+    altText = {$lib.system.socialmedia.linkedin.alt}
+    stdWrap.typolink {
+      parameter = {$lib.system.socialmedia.linkedin.url}
+      extTarget = _blank
+      title = {$lib.system.socialmedia.linkedin.title}
+    }
+  }
+
+  googleplus = IMAGE
+  googleplus {
+    file = {$lib.website.path.siteRoot}/{$lib.system.socialmedia.googleplus.file}
+    altText = {$lib.system.socialmedia.googleplus.alt}
+    stdWrap.typolink {
+      parameter = {$lib.system.socialmedia.googleplus.url}
+      extTarget = _blank
+      title = {$lib.system.socialmedia.googleplus.title}
+    }
+  }
+
+  youtube = IMAGE
+  youtube {
+    file = {$lib.website.path.siteRoot}/{$lib.system.socialmedia.youtube.file}
+    altText = {$lib.system.socialmedia.youtube.alt}
+    stdWrap.typolink {
+      parameter = {$lib.system.socialmedia.youtube.url}
+      extTarget = _blank
+      title = {$lib.system.socialmedia.youtube.title}
+    }
+  }
+
+  twitter = IMAGE
+  twitter {
+    file = {$lib.website.path.siteRoot}/{$lib.system.socialmedia.twitter.file}
+    altText = {$lib.system.socialmedia.twitter.alt}
+    stdWrap.typolink {
+      parameter = {$lib.system.socialmedia.twitter.url}
+      extTarget = _blank
+      title = {$lib.system.socialmedia.twitter.title}
+    }
+  }
+
+  facebook = IMAGE
+  facebook {
+    file = {$lib.website.path.siteRoot}/{$lib.system.socialmedia.facebook.file}
+    altText = {$lib.system.socialmedia.facebook.alt}
+    stdWrap.typolink {
+      parameter = {$lib.system.socialmedia.facebook.url}
+      extTarget = _blank
+      title = {$lib.system.socialmedia.facebook.title}
+    }
+  }
+}
+

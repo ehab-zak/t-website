@@ -1,0 +1,28 @@
+config {
+  sys_language_uid = 0
+  sys_language_isocode_default = de
+  language = de
+  locale_all = de_DE.UTF-8
+
+  sys_language_mode = strict
+
+  defaultGetVars {
+    L = 0
+  }
+}
+lib.lang.label = TEXT
+lib.lang.label.value = DE
+lib.lang.uid = TEXT
+lib.lang.uid.value = 0
+
+// en (uid = 1)
+[globalVar = GP:L = 1]
+  config.sys_language_uid = 1
+  config.sys_language_isocode = en
+  config.language = en
+  config.locale_all = en.UTF-8
+
+  lib.lang.label.value = EN
+  lib.lang.uid.value = 1
+[GLOBAL]
+

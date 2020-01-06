@@ -1,0 +1,301 @@
+<?xml version='1.0' encoding='utf-8'?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2014-08-18T17:05:00Z" product-name="websites" target-language="de">
+        <header/>
+        <body>
+            <trans-unit id="mod_viewpage_desktop" approved="yes">
+                <source>Desktop</source>
+                <target state="translated">Desktop</target></trans-unit>
+            <trans-unit id="mod_viewpage_widescreen" approved="yes">
+                <source>Widescreen / HD</source>
+                <target state="translated">Breitbild / HD</target></trans-unit>
+
+            <trans-unit id="backendlayouts_storage_title" approved="yes">
+                <source>Storage folder</source>
+                <target state="translated">Ablageordner</target></trans-unit>
+            <trans-unit id="backendlayouts_storage_description" approved="yes">
+                <source>Sysfolder to store records</source>
+                <target state="translated">Systemordner für Datenablage</target></trans-unit>
+            <trans-unit id="backendlayouts_storageimageslider_title" approved="yes">
+                <source>Image slider storage folder</source>
+                <target state="translated">Ablageordner für Bildwechsler</target></trans-unit>
+            <trans-unit id="backendlayouts_storageimageslider_description" approved="yes">
+                <source>Sysfolder to store records for image slider</source>
+                <target state="translated">Systemordner für Daten von Bildwechslern</target></trans-unit>
+            <trans-unit id="backendlayouts_default_title" approved="yes">
+                <source>Sub page default</source>
+                <target state="translated">Unterseite Standard</target></trans-unit>
+            <trans-unit id="backendlayouts_default_description" approved="yes">
+                <source>Template for default sub page</source>
+                <target state="translated">Template für Standard Unterseite</target></trans-unit>
+            <trans-unit id="backendlayouts_root_title" approved="yes">
+                <source>Root page</source>
+                <target state="translated">Startseite</target></trans-unit>
+            <trans-unit id="backendlayouts_root_description" approved="yes">
+                <source>Template for root page</source>
+                <target state="translated">Template für Startseite</target></trans-unit>
+            <trans-unit id="backendlayouts_contact_title" approved="yes">
+                <source>Sub page contact</source>
+                <target state="translated">Unterseite Kontakt</target></trans-unit>
+            <trans-unit id="backendlayouts_contact_description" approved="yes">
+                <source>Template for contact sub page</source>
+                <target state="translated">Template für Kontakt Unterseite</target></trans-unit>
+            <trans-unit id="backendlayouts_detailplugin_title" approved="yes">
+                <source>Sub page with detail plugin</source>
+                <target state="translated">Unterseite mit Detail-Plugin</target></trans-unit>
+            <trans-unit id="backendlayouts_detailplugin_description" approved="yes">
+                <source>Template for sub page containing detail plugin. Has no header image and H1 is rendered by plugin.</source>
+                <target state="translated">Template für Unterseite mit Detailseite. Enthält kein Headerbild. H1-Überschrift wird vom Plugin erzeugt.</target></trans-unit>
+            <trans-unit id="backendlayouts_noimage_title" approved="yes">
+                <source>Sub page without header image</source>
+                <target state="translated">Unterseite ohne Headerbild</target></trans-unit>
+            <trans-unit id="backendlayouts_noimage_description" approved="yes">
+                <source>Template for sub page without header image</source>
+                <target state="translated">Template für Unterseite ohne Headerbild</target></trans-unit>
+            <trans-unit id="backendlayouts_glossary_title" approved="yes">
+                <source>Sub page for glossary</source>
+                <target state="translated">Unterseite für Glossar</target></trans-unit>
+            <trans-unit id="backendlayouts_glossary_description" approved="yes">
+                <source>Template for sub page including paganation menu of pages</source>
+                <target state="translated">Template für Unterseite mit Blättermenü der Seiten</target></trans-unit>
+
+            <trans-unit id="gridlayouts_background_title" approved="yes">
+                <source>Container with Background Color</source>
+                <target state="translated">Container mit Hintergrundfarbe</target></trans-unit>
+            <trans-unit id="gridlayouts_background_description" approved="yes">
+                <source>Container with Background Color</source>
+                <target state="translated">Container mit Hintergrundfarbe</target></trans-unit>
+            <trans-unit id="gridlayouts_accordeoncontainer_title" approved="yes">
+                <source>Accordeon container</source>
+                <target state="translated">Akkordeon Container</target></trans-unit>
+            <trans-unit id="gridlayouts_accordeoncontainer_description" approved="yes">
+                <source>Container for accordeon entries</source>
+                <target state="translated">Container für Akkordeon-Elemente</target></trans-unit>
+            <trans-unit id="gridlayouts_accordeonentry_title" approved="yes">
+                <source>Accordeon entry</source>
+                <target state="translated">Akkordeon Eintrag</target></trans-unit>
+            <trans-unit id="gridlayouts_accordeonentry_description" approved="yes">
+                <source>Single accordeon entry</source>
+                <target state="translated">Einzelnes Akkordeon-Element</target></trans-unit>
+            <trans-unit id="gridlayouts_skills_title" approved="yes">
+                <source>Skills</source>
+                <target state="translated">Kompetenzen</target></trans-unit>
+            <trans-unit id="gridlayouts_skills_description" approved="yes">
+                <source>Block showing main skills</source>
+                <target state="translated">Block zur Anzeige der Hauptkompetenzen</target></trans-unit>
+            <trans-unit id="gridlayouts_testimonials_title" approved="yes">
+                <source>Testimonials</source>
+                <target state="translated">Kundenempfehlungen</target></trans-unit>
+            <trans-unit id="gridlayouts_testimonials_description" approved="yes">
+                <source>Block showing testimonials</source>
+                <target state="translated">Block zur Anzeige der Kundenempfehlungen</target></trans-unit>
+            <trans-unit id="gridlayouts_newsslider_title" approved="yes">
+                <source>News slider</source>
+                <target state="translated">News Slider</target></trans-unit>
+            <trans-unit id="gridlayouts_newsslider_description" approved="yes">
+                <source>Block showing slider with latest news</source>
+                <target state="translated">Block zur Anzeige der neuesten News als Slider</target></trans-unit>
+            <trans-unit id="gridlayouts_contactpersons_title" approved="yes">
+                <source>Contact persons</source>
+                <target state="translated">Kontaktpersonen</target></trans-unit>
+            <trans-unit id="gridlayouts_contactpersons_description" approved="yes">
+                <source>Block showing most important contact persons</source>
+                <target state="translated">Block zur Anzeige der wichtigsten Kontaktpersonen</target></trans-unit>
+            <trans-unit id="gridlayouts_contentbox_title" approved="yes">
+                <source>Content box</source>
+                <target state="translated">Inhaltscontainer</target></trans-unit>
+            <trans-unit id="gridlayouts_contentbox_description" approved="yes">
+                <source>Box for content on root page</source>
+                <target state="translated">Container für Inhalte auf der Startseite</target></trans-unit>
+            <trans-unit id="gridlayouts_teaserslider_title" approved="yes">
+                <source>Teaser slider</source>
+                <target state="translated">Teaser Slider</target></trans-unit>
+            <trans-unit id="gridlayouts_teaserslider_description" approved="yes">
+                <source>Block showing slider with teasers</source>
+                <target state="translated">Block zur Anzeige von Teasern als Slider</target></trans-unit>
+
+            <trans-unit id="layouts_column_content" approved="yes">
+                <source>Content</source>
+                <target state="translated">Inhalt</target></trans-unit>
+            <trans-unit id="layouts_column_headerimage" approved="yes">
+                <source>Headerimage</source>
+                <target state="translated">Headerbild</target></trans-unit>
+            <trans-unit id="layouts_column_headline" approved="yes">
+                <source>Headline</source>
+                <target state="translated">Überschrift</target></trans-unit>
+            <trans-unit id="layouts_column_clip" approved="yes">
+                <source>Video clip</source>
+                <target state="translated">Videoclip</target></trans-unit>
+            <trans-unit id="layouts_column_image" approved="yes">
+                <source>Image</source>
+                <target state="translated">Bild</target></trans-unit>
+            <trans-unit id="layouts_column_skill" approved="yes">
+                <source>Skill</source>
+                <target state="translated">Kompetenz</target></trans-unit>
+            <trans-unit id="layouts_column_button" approved="yes">
+                <source>Link button</source>
+                <target state="translated">Link button</target></trans-unit>
+            <trans-unit id="layouts_column_introtext" approved="yes">
+                <source>Intro text</source>
+                <target state="translated">Einleitungstext</target></trans-unit>
+            <trans-unit id="layouts_column_person" approved="yes">
+                <source>Person</source>
+                <target state="translated">Person</target></trans-unit>
+
+            <trans-unit id="customcontentobjects_header" approved="yes">
+                <source>Custom Elements</source>
+                <target state="translated">Eigene Elemente</target></trans-unit>
+            <trans-unit id="customcontentobjects_linkbutton_title" approved="yes">
+                <source>Link button</source>
+                <target state="translated">Link Button</target></trans-unit>
+            <trans-unit id="customcontentobjects_linkbutton_description" approved="yes">
+                <source>Insert button and define link target</source>
+                <target state="translated">Link Button mit definierbarem Ziel einfügen</target></trans-unit>
+            <trans-unit id="customcontentobjects_linkbutton_layout_default" approved="yes">
+                <source>red (Default)</source>
+                <target state="translated">rot (Standard)</target></trans-unit>
+            <trans-unit id="customcontentobjects_linkbutton_layout_white" approved="yes">
+                <source>white</source>
+                <target state="translated">weiß</target></trans-unit>
+            <trans-unit id="customcontentobjects_skill_title" approved="yes">
+                <source>Skill</source>
+                <target state="translated">Kompetenz</target></trans-unit>
+            <trans-unit id="customcontentobjects_skill_description" approved="yes">
+                <source>Single skill entry</source>
+                <target state="translated">Einzelner Eintrag für eine Kompetenz</target></trans-unit>
+            <trans-unit id="customcontentobjects_image_title" approved="yes">
+                <source>Theme</source>
+                <target state="translated">Motiv</target></trans-unit>
+            <trans-unit id="customcontentobjects_image_description" approved="yes">
+                <source>Theme for slider</source>
+                <target state="translated">Motiv für Bildwechsler</target></trans-unit>
+            <trans-unit id="customcontentobjects_testimonial_title" approved="yes">
+                <source>Testimonial</source>
+                <target state="translated">Empfehlung</target></trans-unit>
+            <trans-unit id="customcontentobjects_testimonial_description" approved="yes">
+                <source>Customer testimonial for root page</source>
+                <target state="translated">Kundenempfehlung für Startseite</target></trans-unit>
+            <trans-unit id="customcontentobjects_contactperson_title" approved="yes">
+                <source>Contact person</source>
+                <target state="translated">Kontaktperson</target></trans-unit>
+            <trans-unit id="customcontentobjects_contactperson_description" approved="yes">
+                <source>Single contact person entry for root page</source>
+                <target state="translated">Einzelne Kontaktperson für Startseite</target></trans-unit>
+            <trans-unit id="customcontentobjects_teaser_title" approved="yes">
+                <source>Teaser</source>
+                <target state="translated">Teaser</target></trans-unit>
+            <trans-unit id="customcontentobjects_teaser_description" approved="yes">
+                <source>Teaser for slider</source>
+                <target state="translated">Teaser für Teaserwechsler</target></trans-unit>
+
+            <trans-unit id="table_pages_subtitle_label" approved="yes">
+                <source>Different title for H1 headline</source>
+                <target state="translated">Abweichender Titel für H1-Überschrift</target></trans-unit>
+            <trans-unit id="table_news_teaser_label" approved="yes">
+                <source>Subline for single view</source>
+                <target state="translated">Untertitel für Einzelansicht</target></trans-unit>
+            <trans-unit id="table_ttcontent_headerlayout_default" approved="yes">
+                <source>Default (H2)</source>
+                <target state="translated">Standard (H2)</target></trans-unit>
+            <trans-unit id="table_ttcontent_headerlayout_layout3" approved="yes">
+                <source>Small (H3)</source>
+                <target state="translated">Überschrift klein (H3)</target></trans-unit>
+            <trans-unit id="table_ttcontent_contactperson_header" approved="yes">
+                <source>Name</source>
+                <target state="translated">Name</target></trans-unit>
+            <trans-unit id="table_ttcontent_contactperson_subheader" approved="yes">
+                <source>Position</source>
+                <target state="translated">Position</target></trans-unit>
+            <trans-unit id="table_ttcontent_contactperson_bodytext" approved="yes">
+                <source>Contact data</source>
+                <target state="translated">Kontaktdaten</target></trans-unit>
+            <trans-unit id="table_ttcontent_textmedia_layout_expert" approved="yes">
+                <source>Expert</source>
+                <target state="translated">Expertenmeinung</target></trans-unit>
+            <trans-unit id="table_ttcontent_gridelements_pi1_layout_background" approved="yes">
+                <source>Background</source>
+                <target state="translated">Hintergrund</target></trans-unit>
+            <trans-unit id="table_ttcontent_textmedia_layout_background" approved="yes">
+                <source>Box with grey background</source>
+                <target state="translated">Box mit grauem Hintergrund</target></trans-unit>
+
+            <trans-unit id="rte_fontweight_regular" approved="yes">
+                <source>font weight: regular</source>
+                <target state="translated">Schriftgewicht: regular</target></trans-unit>
+            <trans-unit id="rte_textcolor_default" approved="yes">
+                <source>default</source>
+                <target state="translated">Standard</target></trans-unit>
+            <trans-unit id="rte_textcolor_ci-main" approved="yes">
+                <source>CI main color</source>
+                <target state="translated">CI-Hauptfarbe</target></trans-unit>
+            <trans-unit id="rte_link_more" approved="yes">
+                <source>more</source>
+                <target state="translated">mehr</target></trans-unit>
+            <trans-unit id="rte_classes_h3folder" approved="yes">
+                <source>Headline H3 - icon *Folder*</source>
+                <target state="translated">Überschrift H3 - Icon *Dateiordner</target></trans-unit>
+            <trans-unit id="rte_classes_h3info" approved="yes">
+                <source>Headline H3 - icon *Info*</source>
+                <target state="translated">Überschrift H3 - Icon *Information*</target></trans-unit>
+            <trans-unit id="rte_classes_h3toolbox" approved="yes">
+                <source>Headline H3 - icon *Toolbox*</source>
+                <target state="translated">Überschrift H3 - Icon *Werkzeug*</target></trans-unit>
+            <trans-unit id="rte_classes_h3gear" approved="yes">
+                <source>Headline H3 - icon *Gear*</source>
+                <target state="translated">Überschrift H3 - Icon *Zahnrad*</target></trans-unit>
+
+            <trans-unit id="textlabel_navigation" approved="yes">
+                <source>Navigation</source>
+                <target state="translated">Navigation</target></trans-unit>
+            <trans-unit id="textlabel_contact" approved="yes">
+                <source>Contact</source>
+                <target state="translated">Kontakt</target></trans-unit>
+            <trans-unit id="textlabel_phone" approved="yes">
+                <source>Phone</source>
+                <target state="translated">Telefon</target></trans-unit>
+            <trans-unit id="textlabel_fax" approved="yes">
+                <source>Fax</source>
+                <target state="translated">Telefax</target></trans-unit>
+            <trans-unit id="textlabel_email" approved="yes">
+                <source>Email</source>
+                <target state="translated">E-Mail</target></trans-unit>
+            <trans-unit id="textlabel_sitemap" approved="yes">
+                <source>Sitemap</source>
+                <target state="translated">Sitemap</target></trans-unit>
+            <trans-unit id="textlabel_phone_short" approved="yes">
+                <source>Phone</source>
+                <target state="translated">Tel</target></trans-unit>
+            <trans-unit id="textlabel_totop" approved="yes">
+                <source>to top</source>
+                <target state="translated">nach oben</target></trans-unit>
+            <trans-unit id="textlabel_worksample" approved="yes">
+                <source>Work sample</source>
+                <target state="translated">Referenz</target></trans-unit>
+
+            <trans-unit id="headline_customer" approved="yes">
+                <source>SEKAS effects highest performance:</source>
+                <target state="translated">SEKAS liefert die beste Leistung:</target></trans-unit>
+
+            <trans-unit id="news_templatelayout_list" approved="yes">
+                <source>List</source>
+                <target state="translated">Liste</target></trans-unit>
+            <trans-unit id="news_templatelayout_detaillatest" approved="yes">
+                <source>Detail:latest section</source>
+                <target state="translated">Detail: Abschnitt mit letzten Meldungen</target></trans-unit>
+            <trans-unit id="news_templatelayout_detailsingle" approved="yes">
+                <source>Detail:single section</source>
+                <target state="translated">Detail: Abschnitt mit Einzelansicht</target></trans-unit>
+            <trans-unit id="news_templatelayout_latest" approved="yes">
+                <source>Latest</source>
+                <target state="translated">Letzte Meldungen</target></trans-unit>
+
+            <trans-unit id="linkhandler_tab_news" approved="yes">
+                <source>News</source>
+                <target state="translated">News</target></trans-unit>
+            <trans-unit id="linkhandler_tab_worksamples" approved="yes">
+                <source>Work samples</source>
+                <target state="translated">Referenzen</target></trans-unit>
+
+        </body>
+    </file>
+</xliff>

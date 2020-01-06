@@ -1,0 +1,38 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+	  xmlns:f="http://xsd.helmut-hummel.de/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+{namespace ws=St9\Websites\ViewHelpers}
+<f:layout name="ContentFooter"/>
+
+<f:section name="content">
+	<div class="contactperson">
+		<f:alias map="{image:gallery.rows.1.columns.1}">
+			<div class="image">
+				<figure>
+					<f:media
+							file="{image.media}"
+							alt="{data.header}"
+							title="{data.header}"
+					/>
+					<figcaption>{data.header}</figcaption>
+				</figure>
+			</div>
+			<div class="contactdetails">
+				<h3>{data.header}</h3>
+				<p class="position">{data.subheader}</p>
+				<div class="contactdata">
+					<f:if condition="{data.tx_websites_useParser}">
+						<f:then>
+							<f:format.html><ws:insertContactData>{data.bodytext}</ws:insertContactData></f:format.html>
+						</f:then>
+						<f:else>
+							<f:format.html>{data.bodytext}</f:format.html>
+						</f:else>
+					</f:if>
+				</div>
+			</div>
+		</f:alias>
+	</div>
+</f:section>
+
+</html>

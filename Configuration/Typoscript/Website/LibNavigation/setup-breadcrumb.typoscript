@@ -1,0 +1,41 @@
+lib.navi.breadcrumb = COA
+lib.navi.breadcrumb {
+  wrap = <ul>|</ul>
+
+  30 = HMENU
+  30 {
+    special = rootline
+    special.range = 0
+
+    includeNotInMenu = 1
+
+    1 = TMENU
+    1 {
+      noBlur = 1
+      expAll = 1
+
+      NO = 1
+      NO {
+        stdWrap.cObject = COA
+        stdWrap.cObject {
+          10 = TEXT
+          10 {
+            field = nav_title // title
+            listNum = 0
+            listNum.splitChar = #
+            htmlSpecialChars = 1
+
+          }
+        }
+        allWrap = <li class="path first">|</li> |*| <li class="path middle">|</li> |*| <li class="path last">|</li>
+      }
+
+      CUR < .NO
+      CUR {
+        doNotLinkIt = 1
+        allWrap = <li class="active">|</li>
+      }
+    }
+  }
+}
+

@@ -1,0 +1,17 @@
+lib.meta {
+  description.field = description
+  description.data = page:description
+  keywords.field = keywords
+  keywords.data = page.keywords
+  title.field = title
+  title.data = page.title
+  author.data = levelfield :-1, author, slide
+  date {
+    data = page:SYS_LASTCHANGED // page:crdate
+    date = Y-m-d
+  }
+  robots = {$lib.meta.robots}
+  copyright = {$lib.meta.copyright}
+  language < config.language
+  revisit = {$lib.meta.revisit}
+}
