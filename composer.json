@@ -24,7 +24,7 @@
     },
     "autoload": {
         "psr-4": {
-            "sekas\\\websites\\": "Classes/"
+            "sekas\\websites\\": "Classes/"
         }
     },
     "replace": {
